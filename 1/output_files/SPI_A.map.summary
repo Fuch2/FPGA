@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 28 09:31:07 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
+Revision Name : SPI_A
+Top-level Entity Name : SPI_topA
+Family : Cyclone IV E
+Total logic elements : 618
+    Total combinational functions : 501
+    Dedicated logic registers : 402
+Total registers : 402
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

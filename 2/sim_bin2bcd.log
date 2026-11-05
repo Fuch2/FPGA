@@ -1,0 +1,27 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do bin2bcd_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:57 on Oct 28,2026
+# vlog -sv bin2bcd.sv bin2bcd_tb.sv 
+# -- Compiling module bin2bcd
+# -- Compiling module bin2bcd_tb
+# 
+# Top level modules:
+# 	bin2bcd_tb
+# End time: 12:28:57 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop bin2bcd_tb 
+# Start time: 12:28:57 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.bin2bcd_tb
+# Loading work.bin2bcd
+# TEST PASSED
+# ** Note: $finish    : bin2bcd_tb.sv(142)
+#    Time: 345390 ns  Iteration: 1  Instance: /bin2bcd_tb
+# Break in Module bin2bcd_tb at bin2bcd_tb.sv line 142
+# Stopped at bin2bcd_tb.sv line 142
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 12:28:57 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

@@ -1,0 +1,78 @@
+module uart_tx #(
+    parameter int CLKS_PER_BIT = 434
+) (
+    input  logic       clk,
+    input  logic       rst_n,
+    input  logic [7:0] data,
+    input  logic       valid,
+    output logic       ready,
+    output logic       tx
+);
+
+    localparam int CNT_W = $clog2(CLKS_PER_BIT + 1);
+
+    typedef enum logic [1:0] {IDLE, START, DATA, STOP} state_t;
+
+    state_t           state;
+    logic [CNT_W-1:0] clk_cnt;   // счётчик тактов внутри бита
+    logic [2:0]       bit_idx;   // номер передаваемого бита данных
+    logic [7:0]       shreg;     // сдвиговый регистр данных
+
+    wire bit_done = (clk_cnt == CLKS_PER_BIT - 1);
+
+    assign ready = (state == IDLE);
+
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            state   <= IDLE;
+            clk_cnt <= '0;
+            bit_idx <= '0;
+            shreg   <= '0;
+            tx      <= 1'b1;               // линия в покое = 1
+        end else begin
+            clk_cnt <= bit_done ? '0 : clk_cnt + 1'b1;
+
+            case (state)
+                IDLE: begin
+                    tx      <= 1'b1;
+                    clk_cnt <= '0;
+                    if (valid) begin
+                        shreg <= data;
+                        tx    <= 1'b0;         // старт-бит
+                        state <= START;
+                    end
+                end
+
+                START: begin
+                    if (bit_done) begin
+                        tx      <= shreg[0];   // бит 0
+                        shreg   <= shreg >> 1;
+                        bit_idx <= '0;
+                        state   <= DATA;
+                    end
+                end
+
+                DATA: begin
+                    if (bit_done) begin
+                        if (bit_idx == 3'd7) begin
+                            tx    <= 1'b1;     // стоп-бит
+                            state <= STOP;
+                        end else begin
+                            tx      <= shreg[0];
+                            shreg   <= shreg >> 1;
+                            bit_idx <= bit_idx + 1'b1;
+                        end
+                    end
+                end
+
+                STOP: begin
+                    if (bit_done)
+                        state <= IDLE;
+                end
+
+                default: state <= IDLE;
+            endcase
+        end
+    end
+
+endmodule

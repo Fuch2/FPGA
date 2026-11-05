@@ -1,0 +1,52 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do i2c_master_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:30:54 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_master.sv i2c_slave_model.sv i2c_master_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_master
+# -- Compiling module i2c_slave_model
+# -- Compiling package i2c_master_tb_sv_unit
+# -- Compiling module i2c_master_tb
+# 
+# Top level modules:
+# 	i2c_master_tb
+# End time: 11:30:54 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop i2c_master_tb 
+# Start time: 11:30:54 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.i2c_master_tb_sv_unit
+# Loading work.i2c_master_tb
+# Loading work.i2c_master
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.i2c_slave_model
+# [0.25 us] 1. Reset state
+# [0.25 us] 2. Writes
+# [907.69 us] 3. Repeated START: pointer without STOP + read
+# [1406.87 us] 4. Reads
+# [4189.63 us] 5. Address probes
+# [5278.63 us] 6. NACK on a data byte
+# [5883.59 us] 7. Chain without STOP
+# [7048.39 us] 8. EEPROM page boundary
+# [13143.23 us] 9. Stream delays
+# [14580.07 us] 10. Clock stretching by the slave
+# [16952.33 us] 11. Stretching longer than the timeout
+# [22680.99 us] 12. SDA stuck low
+# [23454.57 us] 13. 120 random transactions
+# [101403.33 us] 14. Memories vs reference
+# ------------------------------------------------------------
+# ERRORS: 0 (testbench) + 0 (bus monitor)
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : i2c_master_tb.sv(514)
+#    Time: 101403330 ns  Iteration: 1  Instance: /i2c_master_tb
+# Break in Module i2c_master_tb at i2c_master_tb.sv line 514
+# Stopped at i2c_master_tb.sv line 514
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 11:31:11 on Oct 28,2026, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0

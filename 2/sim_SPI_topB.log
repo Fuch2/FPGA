@@ -1,0 +1,77 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do SPI_topB_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:05:09 on Oct 28,2026
+# vlog -sv spi_master.sv spi_slave.sv spi_cmd_parser.sv spi_resp_tx.sv spi_mi_stub.sv seg7_dynamic.sv debounce.sv spi_ind.sv SPI_topB.sv SPI_topB_tb.sv 
+# -- Compiling module spi_master
+# -- Compiling module spi_slave
+# -- Compiling module spi_cmd_parser
+# -- Compiling module spi_resp_tx
+# -- Compiling module spi_mi_stub
+# -- Compiling module seg7_dynamic
+# -- Compiling module debounce
+# -- Compiling module spi_ind
+# -- Compiling module SPI_topB
+# -- Compiling module SPI_topB_tb
+# 
+# Top level modules:
+# 	SPI_topB_tb
+# End time: 09:05:09 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop SPI_topB_tb 
+# Start time: 09:05:09 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.SPI_topB_tb
+# Loading work.SPI_topB
+# Loading work.spi_slave
+# Loading work.spi_cmd_parser
+# Loading work.spi_mi_stub
+# Loading work.spi_resp_tx
+# Loading work.spi_ind
+# Loading work.seg7_dynamic
+# Loading work.spi_master
+# Loading work.debounce
+# [0.25 us] 1. Reset state
+# [0.25 us] 2. Start
+# [171.75 us]    first reply (before Start): STATUS 80 D 0000
+# [171.75 us]    answer to Start: STATUS 81 D 0000
+# [172.55 us] 3. Measure, NOP before the end of reading
+# [249.05 us]    answer while BUSY: STATUS 89 D 0000
+# [324.79 us]    answer after BUSY: STATUS 83 D 0001
+# [324.79 us] 4. Measure x2 more
+# [496.29 us]    first reply #2: STATUS 83 D 0001
+# [496.29 us]    answer #2: STATUS 83 D 0002
+# [667.79 us]    first reply #3: STATUS 83 D 0002
+# [667.79 us]    answer #3: STATUS 83 D 0003
+# [667.79 us] 7. Indication
+# [674.99 us]    data: "0003"
+# [686.29 us]    cmd: "c A2"
+# [697.59 us]    status: "5 83"
+# [708.89 us]    tx frames: "t009"
+# [720.19 us]    rx frames: "r009"
+# [731.49 us]    errors: "E000"
+# [731.49 us] 6. Stop, Measure when stopped
+# [902.99 us]    answer to Stop: STATUS 82 D 0003
+# [1075.29 us]    answer when stopped: STATUS 84 D 0003
+# [1091.49 us]    cmd after Stop: "c A2"
+# [1091.49 us] 8. Unknown command and a 3-byte frame
+# [1190.75 us]    Start in a 3-byte frame was ignored: STATUS 84 D 0003
+# [1217.55 us]    errors: "E002"
+# [1243.55 us]    tx frames: "t016"
+# [1254.85 us]    rx frames: "r014"
+# [1254.85 us] 9. KEY2 clear, KEY1 mode cycle
+# [1287.55 us]    tx frames after clear: "t000"
+# [1303.75 us]    errors after clear: "E000"
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : SPI_topB_tb.sv(329)
+#    Time: 1320350 ns  Iteration: 1  Instance: /SPI_topB_tb
+# Break in Module SPI_topB_tb at SPI_topB_tb.sv line 329
+# Stopped at SPI_topB_tb.sv line 329
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:05:10 on Oct 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

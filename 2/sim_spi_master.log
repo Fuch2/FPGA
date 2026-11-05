@@ -1,0 +1,43 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_master_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:01:49 on Oct 28,2026
+# vlog -sv spi_master.sv spi_master_tb.sv 
+# -- Compiling module spi_master
+# -- Compiling module spi_master_tb
+# 
+# Top level modules:
+# 	spi_master_tb
+# End time: 09:01:49 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_master_tb 
+# Start time: 09:01:49 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_master_tb
+# Loading work.spi_master
+# [0.11 us] 1. Reset state
+# [0.11 us] 2. One byte
+# [11.67 us] 3. Protocol frame A2 00 00 00
+# [47.29 us] 4. Corner byte values
+# [102.49 us] 5. Back-to-back transactions
+# [298.29 us] 6. Stall inside a transaction
+# [353.49 us] 7. 300 random transactions
+# [381.63 us]    txn 0
+# [1932.05 us]    txn 50
+# [3477.25 us]    txn 100
+# [5372.03 us]    txn 150
+# [6916.41 us]    txn 200
+# [8552.75 us]    txn 250
+# ------------------------------------------------------------
+# Transactions: 316, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_master_tb.sv(279)
+#    Time: 10141790 ns  Iteration: 1  Instance: /spi_master_tb
+# Break in Module spi_master_tb at spi_master_tb.sv line 279
+# Stopped at spi_master_tb.sv line 279
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:01:50 on Oct 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

@@ -1,0 +1,35 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do eeprom_model_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:36:45 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_master.sv i2c_slave.sv eeprom_model.sv eeprom_model_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_master
+# -- Compiling module i2c_slave
+# -- Compiling module eeprom_model
+# -- Compiling module eeprom_model_tb
+# 
+# Top level modules:
+# 	eeprom_model_tb
+# End time: 12:36:45 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop eeprom_model_tb 
+# Start time: 12:36:45 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.eeprom_model_tb
+# Loading work.i2c_master
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.eeprom_model
+# Loading work.i2c_slave
+# TEST PASSED
+# ** Note: $finish    : eeprom_model_tb.sv(445)
+#    Time: 492178650 ns  Iteration: 1  Instance: /eeprom_model_tb
+# Break in Module eeprom_model_tb at eeprom_model_tb.sv line 445
+# Stopped at eeprom_model_tb.sv line 445
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 12:39:18 on Oct 28,2026, Elapsed time: 0:02:33
+# Errors: 0, Warnings: 0

@@ -1,0 +1,53 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do EE_topB_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:12 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_slave.sv eeprom_model.sv eeprom_bus.sv eeprom_ctrl.sv eeprom_ring.sv eeprom_store.sv eeprom_seq.sv bin2bcd.sv seg7_dynamic.sv debounce.sv eeprom_ind.sv EE_topB.sv EE_topB_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_slave
+# -- Compiling module eeprom_model
+# -- Compiling module eeprom_bus
+# -- Compiling module eeprom_ctrl
+# -- Compiling module eeprom_ring
+# -- Compiling module eeprom_store
+# -- Compiling module eeprom_seq
+# -- Compiling module bin2bcd
+# -- Compiling module seg7_dynamic
+# -- Compiling module debounce
+# -- Compiling module eeprom_ind
+# -- Compiling module EE_topB
+# -- Compiling module EE_topB_tb
+# 
+# Top level modules:
+# 	EE_topB_tb
+# End time: 12:29:12 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop EE_topB_tb 
+# Start time: 12:29:12 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.EE_topB_tb
+# Loading work.EE_topB
+# Loading work.eeprom_seq
+# Loading work.eeprom_store
+# Loading work.eeprom_ring
+# Loading work.eeprom_ctrl
+# Loading work.eeprom_bus
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.eeprom_model
+# Loading work.eeprom_ind
+# Loading work.bin2bcd
+# Loading work.seg7_dynamic
+# Loading work.i2c_slave
+# Loading work.debounce
+# TEST PASSED
+# ** Note: $finish    : EE_topB_tb.sv(231)
+#    Time: 24990870 ns  Iteration: 1  Instance: /EE_topB_tb
+# Break in Module EE_topB_tb at EE_topB_tb.sv line 231
+# Stopped at EE_topB_tb.sv line 231
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 12:29:34 on Oct 28,2026, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0

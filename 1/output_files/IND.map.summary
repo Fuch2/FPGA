@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 27 23:35:57 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
+Revision Name : IND
+Top-level Entity Name : IND_top
+Family : Cyclone IV E
+Total logic elements : 475
+    Total combinational functions : 434
+    Dedicated logic registers : 285
+Total registers : 285
+Total pins : 22
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

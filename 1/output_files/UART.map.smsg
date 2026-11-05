@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at uart_tx.sv(9): object "data" differs only in case from object "DATA" in the same scope File: C:/Users/aynur/Documents/FPGA/uart_tx.sv Line: 9
+Info (10281): Verilog HDL Declaration information at uart_rx.sv(10): object "data" differs only in case from object "DATA" in the same scope File: C:/Users/aynur/Documents/FPGA/uart_rx.sv Line: 10

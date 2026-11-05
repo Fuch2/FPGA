@@ -1,0 +1,4 @@
+# Проект Quartus этапа 3, плата A (МО, SPI-мастер), top = SPI_topA.
+# Лежит рядом с проектами UART, IND и UART2 в той же папке, прежние .qpf не меняются.
+QUARTUS_VERSION = "24.1"
+PROJECT_REVISION = "SPI_A"

@@ -1,0 +1,36 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_resp_tx_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:06:26 on Oct 28,2026
+# vlog -sv spi_resp_tx.sv spi_resp_tx_tb.sv 
+# -- Compiling module spi_resp_tx
+# -- Compiling module spi_resp_tx_tb
+# 
+# Top level modules:
+# 	spi_resp_tx_tb
+# End time: 09:06:26 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_resp_tx_tb 
+# Start time: 09:06:26 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_resp_tx_tb
+# Loading work.spi_resp_tx
+# [0.11 us] 1. Reset state
+# [0.11 us] 2. Frame
+# [0.83 us] 3. status and data change after frame_start
+# [1.07 us] 4. Random tx_ready
+# [75.07 us] 6. frame_start in the middle of a response
+# [75.33 us] 7. 2000 random frames
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_resp_tx_tb.sv(154)
+#    Time: 957490 ns  Iteration: 1  Instance: /spi_resp_tx_tb
+# Break in Module spi_resp_tx_tb at spi_resp_tx_tb.sv line 154
+# Stopped at spi_resp_tx_tb.sv line 154
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:06:26 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

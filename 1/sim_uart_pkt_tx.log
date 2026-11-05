@@ -1,0 +1,38 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do uart_pkt_tx_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:12 on Oct 28,2026
+# vlog -sv uart_pkt_tx.sv uart_pkt_tx_tb.sv 
+# -- Compiling module uart_pkt_tx
+# -- Compiling module uart_pkt_tx_tb
+# 
+# Top level modules:
+# 	uart_pkt_tx_tb
+# End time: 08:33:12 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop uart_pkt_tx_tb 
+# Start time: 08:33:12 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.uart_pkt_tx_tb
+# Loading work.uart_pkt_tx
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlft5wtqsy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5wtqsy
+# [0.07 us] 1. Reset state
+# [0.07 us] 2. Corner packets, tx_ready = 1
+# [0.81 us] 3. 200 random packets, random gaps and tx_ready
+# ------------------------------------------------------------
+# packets: 204, bytes: 1632, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : uart_pkt_tx_tb.sv(203)
+#    Time: 111510 ns  Iteration: 1  Instance: /uart_pkt_tx_tb
+# Break in Module uart_pkt_tx_tb at uart_pkt_tx_tb.sv line 203
+# Stopped at uart_pkt_tx_tb.sv line 203
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:12 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

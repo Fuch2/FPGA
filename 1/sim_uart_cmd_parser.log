@@ -1,0 +1,39 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do uart_cmd_parser_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:17 on Oct 28,2026
+# vlog -sv uart_cmd_parser.sv uart_cmd_parser_tb.sv 
+# -- Compiling module uart_cmd_parser
+# -- Compiling module uart_cmd_parser_tb
+# 
+# Top level modules:
+# 	uart_cmd_parser_tb
+# End time: 08:33:17 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop uart_cmd_parser_tb 
+# Start time: 08:33:17 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.uart_cmd_parser_tb
+# Loading work.uart_cmd_parser
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftanx1ij".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftanx1ij
+# [0.05 us] 1. Reset state
+# [0.11 us] 2. Start, garbage, Start, Stop, Stop, Start
+# [0.41 us] 3. All 256 byte values
+# [5.53 us] 4. 2000 random bytes
+# ------------------------------------------------------------
+# Start: 513, Stop: 495, garbage: 1254, cycles: 5304, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : uart_cmd_parser_tb.sv(114)
+#    Time: 106130 ns  Iteration: 1  Instance: /uart_cmd_parser_tb
+# Break in Module uart_cmd_parser_tb at uart_cmd_parser_tb.sv line 114
+# Stopped at uart_cmd_parser_tb.sv line 114
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:17 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

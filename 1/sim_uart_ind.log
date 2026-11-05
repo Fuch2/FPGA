@@ -1,0 +1,56 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do uart_ind_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:19 on Oct 28,2026
+# vlog -sv seg7_dynamic.sv uart_ind.sv uart_ind_tb.sv 
+# -- Compiling module seg7_dynamic
+# -- Compiling module uart_ind
+# -- Compiling module uart_ind_tb
+# 
+# Top level modules:
+# 	uart_ind_tb
+# End time: 08:33:19 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop uart_ind_tb 
+# Start time: 08:33:19 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.uart_ind_tb
+# Loading work.uart_ind
+# Loading work.seg7_dynamic
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftdvgv32".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdvgv32
+# [0.05 us] 1. Reset state
+# [3.35 us]    mode b: 7c xx 3f 3f (dig3..dig0)
+# [3.35 us] 2. 3000 clocks of random events
+# [63.35 us] 3. All display modes
+# [66.65 us]    mode b: 7c xx 06 5e (dig3..dig0)
+# [69.97 us]    mode r: 50 6d 7f 4f (dig3..dig0)
+# [73.29 us]    mode t: 78 6d 7d 3f (dig3..dig0)
+# [76.61 us]    mode E: 79 6d 7d 7d (dig3..dig0)
+# [79.93 us]    mode u: 1c 6d 6f 3f (dig3..dig0)
+# [83.25 us]    mode b: 7c xx 06 5e (dig3..dig0)
+# [83.25 us] 4. Counter 999 -> 000
+# [94.87 us]    mode r: 50 6f 6f 7f (dig3..dig0)
+# [98.19 us]    mode r: 50 6f 6f 6f (dig3..dig0)
+# [101.51 us]    mode r: 50 3f 3f 3f (dig3..dig0)
+# [101.51 us] 5. clear
+# [104.91 us]    mode t: 78 3f 3f 3f (dig3..dig0)
+# [108.23 us]    mode E: 79 3f 3f 3f (dig3..dig0)
+# [111.55 us]    mode u: 1c 3f 3f 3f (dig3..dig0)
+# [114.87 us]    mode b: 7c xx 3f 3f (dig3..dig0)
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : uart_ind_tb.sv(234)
+#    Time: 114870 ns  Iteration: 1  Instance: /uart_ind_tb
+# Break in Module uart_ind_tb at uart_ind_tb.sv line 234
+# Stopped at uart_ind_tb.sv line 234
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:19 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

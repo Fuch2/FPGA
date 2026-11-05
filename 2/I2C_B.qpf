@@ -1,0 +1,4 @@
+# Проект Quartus этапа 4, плата B (МИ, I2C-мастер), top = I2C_topB.
+# Лежит рядом с проектами Second и SPI_B в той же папке, их qpf/qsf не меняются.
+QUARTUS_VERSION = "24.1"
+PROJECT_REVISION = "I2C_B"

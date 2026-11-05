@@ -1,0 +1,47 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do UART_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:32:54 on Oct 28,2026
+# vlog -sv uart_tx.sv uart_rx.sv UART.sv UART_tb.sv 
+# -- Compiling module uart_tx
+# -- Compiling module uart_rx
+# -- Compiling module UART
+# -- Compiling module UART_tb
+# 
+# Top level modules:
+# 	UART_tb
+# End time: 08:32:54 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop UART_tb 
+# Start time: 08:32:54 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.UART_tb
+# Loading work.UART
+# Loading work.uart_tx
+# Loading work.uart_rx
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftde5v1y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftde5v1y
+# UART_tb: CLK_FREQ = 50000000 Hz, BAUD = 115200, CLKS_PER_BIT = 434, bit = 8680.0 ns
+# [0.1 us] 1. Reset state
+# [0.1 us] 2. Transmitter: patterns and back-to-back stream
+# [2096.8 us] 3. Receiver: nominal baud, frames without gaps
+# [4197.4 us] 4. Receiver: sender baud -3% and +3%
+# [5603.6 us] 5. Receiver: short glitch is ignored
+# [5709.9 us] 6. Receiver: frame error and recovery
+# [5918.2 us] 7. Loopback TX -> RX
+# ------------------------------------------------------------
+# TX frames: 56, RX bytes: 73, RX frame errors: 1, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : UART_tb.sv(285)
+#    Time: 8709530 ns  Iteration: 0  Instance: /UART_tb
+# Break in Module UART_tb at UART_tb.sv line 285
+# Stopped at UART_tb.sv line 285
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:32:56 on Oct 28,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 2

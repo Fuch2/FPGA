@@ -1,0 +1,43 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do eeprom_seq_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:00 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_slave.sv eeprom_model.sv eeprom_bus.sv eeprom_ctrl.sv eeprom_ring.sv eeprom_store.sv eeprom_seq.sv eeprom_seq_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_slave
+# -- Compiling module eeprom_model
+# -- Compiling module eeprom_bus
+# -- Compiling module eeprom_ctrl
+# -- Compiling module eeprom_ring
+# -- Compiling module eeprom_store
+# -- Compiling module eeprom_seq
+# -- Compiling module eeprom_seq_tb
+# 
+# Top level modules:
+# 	eeprom_seq_tb
+# End time: 12:29:00 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop eeprom_seq_tb 
+# Start time: 12:29:00 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.eeprom_seq_tb
+# Loading work.eeprom_seq
+# Loading work.eeprom_store
+# Loading work.eeprom_ring
+# Loading work.eeprom_ctrl
+# Loading work.eeprom_bus
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.eeprom_model
+# Loading work.i2c_slave
+# TEST PASSED
+# ** Note: $finish    : eeprom_seq_tb.sv(308)
+#    Time: 33708030 ns  Iteration: 1  Instance: /eeprom_seq_tb
+# Break in Module eeprom_seq_tb at eeprom_seq_tb.sv line 308
+# Stopped at eeprom_seq_tb.sv line 308
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 12:29:11 on Oct 28,2026, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 0

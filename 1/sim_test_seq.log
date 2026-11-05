@@ -1,0 +1,42 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do test_seq_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:05 on Oct 28,2026
+# vlog -sv test_seq.sv test_seq_tb.sv 
+# -- Compiling module test_seq
+# -- Compiling module test_seq_tb
+# 
+# Top level modules:
+# 	test_seq_tb
+# End time: 08:33:05 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop test_seq_tb 
+# Start time: 08:33:05 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.test_seq_tb
+# Loading work.test_seq
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftey3nj7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftey3nj7
+# test_seq_tb: SLOW = 40 clk, FAST = 10 clk
+# [60000] 1-2. Mode 0 after reset (segment / digit test), 30 frames
+# [23290000] 3. Mode 1: decimal counter, 10003 frames (wrap 9999 -> 0000)
+# [2023750000] 4. Mode 2: hex counter, 65539 frames (wrap FFFF -> 0000)
+# [15131410000] 5. Mode 3: ROM, 20 frames
+# [15146670000] 6. Pause and resume in mode 1
+# [15152530000] 7. Mode change in the middle of a step
+# ------------------------------------------------------------
+# frames: 75619, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : test_seq_tb.sv(198)
+#    Time: 15163300 ns  Iteration: 1  Instance: /test_seq_tb
+# Break in Module test_seq_tb at test_seq_tb.sv line 198
+# Stopped at test_seq_tb.sv line 198
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:08 on Oct 28,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 2

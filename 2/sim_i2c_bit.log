@@ -1,0 +1,40 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do i2c_bit_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:51:10 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_bit_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling package i2c_bit_tb_sv_unit
+# -- Compiling module i2c_bit_tb
+# 
+# Top level modules:
+# 	i2c_bit_tb
+# End time: 09:51:10 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop i2c_bit_tb 
+# Start time: 09:51:10 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.i2c_bit_tb_sv_unit
+# Loading work.i2c_bit_tb
+# Loading work.i2c_bit
+# [0.25 us] 1. Reset state
+# [0.25 us] 2. START from idle bus
+# [15.33 us] 3. Write bytes
+# [339.17 us] 4. Read bytes
+# [663.01 us] 5. Repeated START, STOP, START
+# [804.41 us] 7. Clock stretching 60 us after every fall
+# [2029.83 us] 8. Stretching longer than the timeout
+# [6107.79 us] 9. Arbitration
+# ------------------------------------------------------------
+# ERRORS: 0 (testbench) + 0 (bus monitor)
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : i2c_bit_tb.sv(297)
+#    Time: 6384530 ns  Iteration: 1  Instance: /i2c_bit_tb
+# Break in Module i2c_bit_tb at i2c_bit_tb.sv line 297
+# Stopped at i2c_bit_tb.sv line 297
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:51:12 on Oct 28,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

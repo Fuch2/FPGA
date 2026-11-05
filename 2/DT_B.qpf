@@ -1,0 +1,4 @@
+# Проект Quartus этапа 5, плата B (МИ, чтение ДТ LM75A + имитатор), top = DT_topB.
+# Лежит рядом с проектами Second, SPI_B и I2C_B в той же папке, их qpf/qsf не меняются.
+QUARTUS_VERSION = "24.1"
+PROJECT_REVISION = "DT_B"

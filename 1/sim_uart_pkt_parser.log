@@ -1,0 +1,40 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do uart_pkt_parser_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:15 on Oct 28,2026
+# vlog -sv uart_pkt_parser.sv uart_pkt_parser_tb.sv 
+# -- Compiling module uart_pkt_parser
+# -- Compiling module uart_pkt_parser_tb
+# 
+# Top level modules:
+# 	uart_pkt_parser_tb
+# End time: 08:33:15 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop uart_pkt_parser_tb 
+# Start time: 08:33:15 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.uart_pkt_parser_tb
+# Loading work.uart_pkt_parser
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlft82xwk0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft82xwk0
+# [0.07 us] 1. Reset state
+# [1.67 us] 2. Corner cases
+# [3.95 us] 3. Timeout: gap TIMEOUT-1 is ok, gap TIMEOUT aborts
+# [14.13 us] 4. Random stream: 600 pieces
+# ------------------------------------------------------------
+# generated: good 228, bad CHK 130, garbage 199, cut 57
+# events checked: 618, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : uart_pkt_parser_tb.sv(288)
+#    Time: 283830 ns  Iteration: 1  Instance: /uart_pkt_parser_tb
+# Break in Module uart_pkt_parser_tb at uart_pkt_parser_tb.sv line 288
+# Stopped at uart_pkt_parser_tb.sv line 288
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:16 on Oct 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2

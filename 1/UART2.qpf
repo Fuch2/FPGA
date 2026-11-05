@@ -1,0 +1,4 @@
+# Проект Quartus этапа 2: UART - команды, пакеты, индикация (top = UART_top2).
+# Лежит рядом с проектами UART и IND в той же папке, прежний UART.qpf не меняется.
+QUARTUS_VERSION = "24.1"
+PROJECT_REVISION = "UART2"

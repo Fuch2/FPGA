@@ -1,0 +1,250 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/aynur/Documents/FPGA/2
+vee_store_env
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1793180890
+!i10b 1
+!s100 d]=HfMYOF3d>5i9Rm`WJ90
+I4CJ43@MoZZ_Q]?F7WP8PK2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 eeprom_ring_tb_sv_unit
+S1
+R0
+Z5 w1793180334
+Z6 8eeprom_ring_tb.sv
+Z7 Feeprom_ring_tb.sv
+L0 36
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1793180890.000000
+Z10 !s107 eeprom_ring_tb.sv|eeprom_store.sv|eeprom_ring.sv|eeprom_ctrl.sv|eeprom_model.sv|i2c_slave.sv|i2c_master.sv|i2c_txn.sv|i2c_bit.sv|
+Z11 !s90 -sv|i2c_bit.sv|i2c_txn.sv|i2c_master.sv|i2c_slave.sv|eeprom_model.sv|eeprom_ctrl.sv|eeprom_ring.sv|eeprom_store.sv|eeprom_ring_tb.sv|
+!i113 1
+o-sv
+Z12 tCvgOpt 0
+veeprom_ctrl
+R1
+R2
+!i10b 1
+!s100 =1A=oI:I0A]k57n9hJobV1
+Iz3[57;9GIBFTjEzzk1LDA1
+R3
+!s105 eeprom_ctrl_sv_unit
+S1
+R0
+w1793177705
+8eeprom_ctrl.sv
+Feeprom_ctrl.sv
+L0 40
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+veeprom_model
+R1
+R2
+!i10b 1
+!s100 :gLI4gjj1`VlDYnMLKjlY0
+IFR@b]4AN@bdfjIm6iC5d41
+R3
+!s105 eeprom_model_sv_unit
+S1
+R0
+w1793179703
+8eeprom_model.sv
+Feeprom_model.sv
+Z13 L0 29
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+veeprom_ring
+R1
+R2
+!i10b 1
+!s100 dCb<DnZ]NbnRPFdc9ghB42
+IOLS:MNhJYEO0GYkKkDkPO1
+R3
+!s105 eeprom_ring_sv_unit
+S1
+R0
+Z14 w1793178581
+8eeprom_ring.sv
+Feeprom_ring.sv
+L0 23
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+veeprom_ring_tb
+R1
+R2
+!i10b 1
+!s100 h4ZT6bIJzR0NL3^DD7HM_3
+IYnI[MhDdUDLOOWNiNTd2W1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 154
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+veeprom_store
+R1
+R2
+!i10b 1
+!s100 `4C:0X]Z1N02jchImSHfL3
+IIT@z`YoL<>=LLlZHoWNWL3
+R3
+!s105 eeprom_store_sv_unit
+S1
+R0
+R14
+8eeprom_store.sv
+Feeprom_store.sv
+L0 17
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vi2c_bit
+R1
+R2
+!i10b 1
+!s100 b<EAmYV]dhf]PZm]eHN`g2
+IbL=M]EIX0Vk?7:^?M;A^G3
+R3
+!s105 i2c_bit_sv_unit
+S1
+R0
+Z15 w1793169944
+8i2c_bit.sv
+Fi2c_bit.sv
+R13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vi2c_master
+R1
+R2
+!i10b 1
+!s100 FfPJlbhjgTDc8^6Gj`4R43
+IiT>0@ojhGT6STDUlO<9Qf3
+R3
+!s105 i2c_master_sv_unit
+S1
+R0
+R15
+8i2c_master.sv
+Fi2c_master.sv
+L0 18
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vi2c_slave
+R1
+R2
+!i10b 1
+!s100 9VWI;<DeTJ8Ab1PP;PX3P0
+IShN9ER@:I;d9nEl`N@RFQ1
+R3
+!s105 i2c_slave_sv_unit
+S1
+R0
+w1793175134
+8i2c_slave.sv
+Fi2c_slave.sv
+L0 20
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vi2c_txn
+R1
+R2
+!i10b 1
+!s100 LgzGWkXeUY3lezMVnI5DN1
+IGoDnBi7Y<9B>B`^V50bKN0
+R3
+!s105 i2c_txn_sv_unit
+S1
+R0
+R15
+8i2c_txn.sv
+Fi2c_txn.sv
+L0 34
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12

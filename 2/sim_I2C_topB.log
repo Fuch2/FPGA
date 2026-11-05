@@ -1,0 +1,85 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do I2C_topB_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:31:12 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_master.sv i2c_seq.sv i2c_res_parser.sv seg7_dynamic.sv debounce.sv i2c_ind.sv i2c_slave_model.sv I2C_topB.sv I2C_topB_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_master
+# -- Compiling module i2c_seq
+# -- Compiling module i2c_res_parser
+# -- Compiling module seg7_dynamic
+# -- Compiling module debounce
+# -- Compiling module i2c_ind
+# -- Compiling module i2c_slave_model
+# -- Compiling module I2C_topB
+# -- Compiling package I2C_topB_tb_sv_unit
+# -- Compiling module I2C_topB_tb
+# 
+# Top level modules:
+# 	I2C_topB_tb
+# End time: 11:31:12 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop I2C_topB_tb 
+# Start time: 11:31:12 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.I2C_topB_tb_sv_unit
+# Loading work.I2C_topB_tb
+# Loading work.I2C_topB
+# Loading work.i2c_master
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.i2c_seq
+# Loading work.i2c_res_parser
+# Loading work.i2c_ind
+# Loading work.seg7_dynamic
+# Loading work.i2c_slave_model
+# Loading work.debounce
+# [0.25 us] 1. Reset state
+# [3.45 us] 2. KEY2: script 1
+# [8.45 us]    "P  1"
+# [8.45 us] 3. KEY1: DT_TEMP
+# [512.21 us]    data: "1960"
+# [517.21 us]    address: "A 48"
+# [522.21 us]    status: "5 80"
+# [527.21 us]    transactions: "t002"
+# [532.21 us]    NACK: "n000"
+# [537.21 us]    errors: "E000"
+# [537.21 us] 4. DT_TOS
+# [1042.67 us]    data (Tos): "5000"
+# [1042.67 us] 5. SCAN
+# [15607.31 us]    found list "F1.48"
+# [16007.31 us]    found list "F2.50"
+# [16407.31 us]    found list "F3.51"
+# [16807.31 us]    found list "F4.52"
+# [17207.31 us]    found list "F5.53"
+# [17219.11 us]    transactions after SCAN: "t116"
+# [17224.11 us]    NACK after SCAN: "n107"
+# [17229.11 us]    errors after SCAN: "E000"
+# [17229.11 us] 6. ABSENT
+# [17370.09 us]    NACK after ABSENT: "n108"
+# [17375.09 us]    errors after ABSENT: "E000"
+# [17386.89 us]    status after ABSENT: "5 01"
+# [17386.89 us] 7. Sensor is missing, KEY4
+# [17524.47 us]    errors: "E001"
+# [17529.57 us]    errors after KEY4: "E000"
+# [17543.07 us]    transactions after KEY4: "t000"
+# [17554.87 us]    data after KEY4: "0000"
+# [17554.87 us] 8. EE_WRITE
+# [23353.17 us]    data (EEPROM read back): "005F"
+# [23364.97 us]    errors after EE_WRITE: "E000"
+# [23364.97 us] 9. Sensor is back
+# [23873.83 us]    data: "1960"
+# ------------------------------------------------------------
+# ERRORS: 0 (testbench) + 0 (bus monitor)
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : I2C_topB_tb.sv(309)
+#    Time: 23873830 ns  Iteration: 1  Instance: /I2C_topB_tb
+# Break in Module I2C_topB_tb at I2C_topB_tb.sv line 309
+# Stopped at I2C_topB_tb.sv line 309
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 11:31:23 on Oct 28,2026, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 0

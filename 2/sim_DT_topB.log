@@ -1,0 +1,78 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do DT_topB_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:29:35 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_slave.sv temp_gen.sv dt_model.sv dt_bus.sv dt_reader.sv temp_fmt.sv seg7_dynamic.sv debounce.sv dt_ind.sv DT_topB.sv DT_topB_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_slave
+# -- Compiling module temp_gen
+# -- Compiling module dt_model
+# -- Compiling module dt_bus
+# -- Compiling module dt_reader
+# -- Compiling module temp_fmt
+# -- Compiling module seg7_dynamic
+# -- Compiling module debounce
+# -- Compiling module dt_ind
+# -- Compiling module DT_topB
+# -- Compiling package DT_topB_tb_sv_unit
+# -- Compiling module DT_topB_tb
+# 
+# Top level modules:
+# 	DT_topB_tb
+# End time: 11:29:35 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop DT_topB_tb 
+# Start time: 11:29:35 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.DT_topB_tb_sv_unit
+# Loading work.DT_topB_tb
+# Loading work.DT_topB
+# Loading work.dt_reader
+# Loading work.dt_bus
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.dt_model
+# Loading work.i2c_slave
+# Loading work.temp_gen
+# Loading work.dt_ind
+# Loading work.temp_fmt
+# Loading work.seg7_dynamic
+# Loading work.debounce
+# [0.05 us] 1. First poll after reset
+# [2003.43 us]    first poll (sensor not updated yet): "  0.0"
+# [6006.61 us]    25.375 degC: " 25.4"
+# [6006.61 us] 2. KEY1: read on request
+# [11011.49 us]    -5.25 degC: " -5.3"
+# [16016.41 us]    -25.375 degC: "-25.4"
+# [21021.33 us]    125.0 degC: "125.0"
+# [26026.25 us]    0.0 degC: "  0.0"
+# [31027.99 us] 3. Sensor disconnected
+# [34032.85 us]    sensor off: " Err"
+# [37037.73 us]    sensor back: "125.0"
+# [37037.73 us] 4. KEY3 modes
+# [37042.63 us]    hex: "7D00"
+# [37057.33 us]    source (sensor): "50 2"
+# [37057.33 us] 5. KEY2: simulator instead of the sensor
+# [37062.33 us]    source (simulator): "51 2"
+# [72095.83 us] 6. KEY4: simulator modes
+# [72100.73 us]    source (noise): "51 3"
+# [107140.81 us]    constant: " 20.0"
+# [142147.39 us]    linear end: " 30.0"
+# [150150.57 us]    linear stays: " 30.0"
+# [150150.57 us] 7. KEY2: back to the sensor
+# [156157.15 us]    sensor again: "125.0"
+# [156157.15 us] 8. Line monitor
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : DT_topB_tb.sv(323)
+#    Time: 156157150 ns  Iteration: 1  Instance: /DT_topB_tb
+# Break in Module DT_topB_tb at DT_topB_tb.sv line 323
+# Stopped at DT_topB_tb.sv line 323
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 11:30:53 on Oct 28,2026, Elapsed time: 0:01:18
+# Errors: 0, Warnings: 0

@@ -1,0 +1,40 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do test_pkt_gen_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:18 on Oct 28,2026
+# vlog -sv test_pkt_gen.sv test_pkt_gen_tb.sv 
+# -- Compiling module test_pkt_gen
+# -- Compiling module test_pkt_gen_tb
+# 
+# Top level modules:
+# 	test_pkt_gen_tb
+# End time: 08:33:18 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop test_pkt_gen_tb 
+# Start time: 08:33:18 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.test_pkt_gen_tb
+# Loading work.test_pkt_gen
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlfthzzghr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthzzghr
+# [0.05 us] 1. Reset state, run = 0
+# [5.05 us] 2. single pulses
+# [5.71 us] 3. restart + run: first packet at once, then every 50 clocks
+# [25.79 us] 4. ready = 0 for 5 periods
+# [33.89 us] 5. Saturation: 3 of 26 dut_sat packets saturated; sat_sub on random pairs
+# ------------------------------------------------------------
+# packets: main 26, sat 26, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : test_pkt_gen_tb.sv(191)
+#    Time: 33890 ns  Iteration: 1  Instance: /test_pkt_gen_tb
+# Break in Module test_pkt_gen_tb at test_pkt_gen_tb.sv line 191
+# Stopped at test_pkt_gen_tb.sv line 191
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:18 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

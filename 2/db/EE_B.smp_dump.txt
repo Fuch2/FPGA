@@ -1,0 +1,84 @@
+
+State Machine - |EE_topB|eeprom_bus:u_bus|eeprom_model:u_model|i2c_slave:g_slave[3].u_slave|state
+Name state.MACK state.TX state.LOAD state.ACK_LOW state.ACK_WAIT state.RX_DATA state.RX_ADDR state.IDLE state.MACK_END 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.RX_ADDR 0 0 0 0 0 0 1 1 0 
+state.RX_DATA 0 0 0 0 0 1 0 1 0 
+state.ACK_WAIT 0 0 0 0 1 0 0 1 0 
+state.ACK_LOW 0 0 0 1 0 0 0 1 0 
+state.LOAD 0 0 1 0 0 0 0 1 0 
+state.TX 0 1 0 0 0 0 0 1 0 
+state.MACK 1 0 0 0 0 0 0 1 0 
+state.MACK_END 0 0 0 0 0 0 0 1 1 
+
+State Machine - |EE_topB|eeprom_bus:u_bus|eeprom_model:u_model|i2c_slave:g_slave[2].u_slave|state
+Name state.MACK state.TX state.LOAD state.ACK_LOW state.ACK_WAIT state.RX_DATA state.RX_ADDR state.IDLE state.MACK_END 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.RX_ADDR 0 0 0 0 0 0 1 1 0 
+state.RX_DATA 0 0 0 0 0 1 0 1 0 
+state.ACK_WAIT 0 0 0 0 1 0 0 1 0 
+state.ACK_LOW 0 0 0 1 0 0 0 1 0 
+state.LOAD 0 0 1 0 0 0 0 1 0 
+state.TX 0 1 0 0 0 0 0 1 0 
+state.MACK 1 0 0 0 0 0 0 1 0 
+state.MACK_END 0 0 0 0 0 0 0 1 1 
+
+State Machine - |EE_topB|eeprom_bus:u_bus|eeprom_model:u_model|i2c_slave:g_slave[1].u_slave|state
+Name state.MACK state.TX state.LOAD state.ACK_LOW state.ACK_WAIT state.RX_DATA state.RX_ADDR state.IDLE state.MACK_END 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.RX_ADDR 0 0 0 0 0 0 1 1 0 
+state.RX_DATA 0 0 0 0 0 1 0 1 0 
+state.ACK_WAIT 0 0 0 0 1 0 0 1 0 
+state.ACK_LOW 0 0 0 1 0 0 0 1 0 
+state.LOAD 0 0 1 0 0 0 0 1 0 
+state.TX 0 1 0 0 0 0 0 1 0 
+state.MACK 1 0 0 0 0 0 0 1 0 
+state.MACK_END 0 0 0 0 0 0 0 1 1 
+
+State Machine - |EE_topB|eeprom_bus:u_bus|eeprom_model:u_model|i2c_slave:g_slave[0].u_slave|state
+Name state.MACK state.TX state.LOAD state.ACK_LOW state.ACK_WAIT state.RX_DATA state.RX_ADDR state.IDLE state.MACK_END 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.RX_ADDR 0 0 0 0 0 0 1 1 0 
+state.RX_DATA 0 0 0 0 0 1 0 1 0 
+state.ACK_WAIT 0 0 0 0 1 0 0 1 0 
+state.ACK_LOW 0 0 0 1 0 0 0 1 0 
+state.LOAD 0 0 1 0 0 0 0 1 0 
+state.TX 0 1 0 0 0 0 0 1 0 
+state.MACK 1 0 0 0 0 0 0 1 0 
+state.MACK_END 0 0 0 0 0 0 0 1 1 
+
+State Machine - |EE_topB|eeprom_bus:u_bus|i2c_bit:u_bit|state
+Name state.IDLE state.HOLD state.ACT 
+state.IDLE 0 0 0 
+state.ACT 1 0 1 
+state.HOLD 1 1 0 
+
+State Machine - |EE_topB|eeprom_bus:u_bus|i2c_txn:u_txn|state
+Name state.FINISH state.STOP state.RD_ACK state.RD_PUSH state.RD_DATA state.WR_ACK state.WR_DATA state.WR_WAIT state.ADDR_ACK state.ADDR state.START state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.START 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ADDR 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ADDR_ACK 0 0 0 0 0 0 0 0 1 0 0 1 
+state.WR_WAIT 0 0 0 0 0 0 0 1 0 0 0 1 
+state.WR_DATA 0 0 0 0 0 0 1 0 0 0 0 1 
+state.WR_ACK 0 0 0 0 0 1 0 0 0 0 0 1 
+state.RD_DATA 0 0 0 0 1 0 0 0 0 0 0 1 
+state.RD_PUSH 0 0 0 1 0 0 0 0 0 0 0 1 
+state.RD_ACK 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STOP 0 1 0 0 0 0 0 0 0 0 0 1 
+state.FINISH 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |EE_topB|eeprom_store:u_store|eeprom_ctrl:u_ctrl|result
+Name result.R_BUS result.R_NACK result.R_OK result.R_NONE result.R_POLL 
+result.R_NONE 0 0 0 0 0 
+result.R_OK 0 0 1 1 0 
+result.R_NACK 0 1 0 1 0 
+result.R_BUS 1 0 0 1 0 
+result.R_POLL 0 0 0 1 1 
+
+State Machine - |EE_topB|eeprom_seq:u_seq|state
+Name state.FINISH state.WAIT state.ISSUE state.IDLE 
+state.IDLE 0 0 0 0 
+state.ISSUE 0 0 1 1 
+state.WAIT 0 1 0 1 
+state.FINISH 1 0 0 1 

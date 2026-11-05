@@ -1,0 +1,81 @@
+# Этап 6: EEPROM AT24C08 (запись, чтение, кольцевой буфер) и имитатор EEPROM, плата B (МИ); OMDAZZ, EP4CE6E22C8
+# Карта выводов - PROTOCOL.md (эта папка), раздел 2
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY EE_topB
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+
+set_global_assignment -name SYSTEMVERILOG_FILE i2c_bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE i2c_txn.sv
+set_global_assignment -name SYSTEMVERILOG_FILE i2c_slave.sv
+set_global_assignment -name SYSTEMVERILOG_FILE eeprom_model.sv
+set_global_assignment -name SYSTEMVERILOG_FILE eeprom_bus.sv
+set_global_assignment -name SYSTEMVERILOG_FILE eeprom_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE eeprom_ring.sv
+set_global_assignment -name SYSTEMVERILOG_FILE eeprom_store.sv
+set_global_assignment -name SYSTEMVERILOG_FILE eeprom_seq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE bin2bcd.sv
+set_global_assignment -name SYSTEMVERILOG_FILE seg7_dynamic.sv
+set_global_assignment -name SYSTEMVERILOG_FILE debounce.sv
+set_global_assignment -name SYSTEMVERILOG_FILE eeprom_ind.sv
+set_global_assignment -name SYSTEMVERILOG_FILE EE_topB.sv
+set_global_assignment -name SDC_FILE EE_B.sdc
+
+# ---- Такт, сброс, светодиоды (активный 0) [проверено на плате A] ----
+set_location_assignment PIN_23 -to clk
+set_location_assignment PIN_25 -to rst_n
+set_location_assignment PIN_87 -to led[0]
+set_location_assignment PIN_86 -to led[1]
+set_location_assignment PIN_85 -to led[2]
+set_location_assignment PIN_84 -to led[3]
+
+# ---- Кнопки KEY1..KEY4 (нажата = 0) ----
+# PIN_88..91 - выделенные тактовые входы (только вход), внутренней подтяжки у них нет
+set_location_assignment PIN_88 -to key[0]
+set_location_assignment PIN_89 -to key[1]
+set_location_assignment PIN_90 -to key[2]
+set_location_assignment PIN_91 -to key[3]
+
+# ---- Шина I2C на плате B: SCL PIN_99, SDA PIN_98 (LM75A и AT24C08) [по схеме] ----
+# открытый сток: пин либо 0, либо Z; внутренняя подтяжка ПЛИС (~25 кОм) как страховка
+set_location_assignment PIN_99 -to i2c_scl
+set_location_assignment PIN_98 -to i2c_sda
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to i2c_scl
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to i2c_sda
+
+# ---- Семисегментный индикатор: DIG1..DIG4, SEG0..SEG7 (активный 0) ----
+set_location_assignment PIN_133 -to dig[0]
+set_location_assignment PIN_135 -to dig[1]
+set_location_assignment PIN_136 -to dig[2]
+set_location_assignment PIN_137 -to dig[3]
+set_location_assignment PIN_128 -to seg[0]
+set_location_assignment PIN_121 -to seg[1]
+set_location_assignment PIN_125 -to seg[2]
+set_location_assignment PIN_129 -to seg[3]
+set_location_assignment PIN_132 -to seg[4]
+set_location_assignment PIN_126 -to seg[5]
+set_location_assignment PIN_124 -to seg[6]
+set_location_assignment PIN_127 -to seg[7]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i2c_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i2c_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dig[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg[*]
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

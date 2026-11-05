@@ -1,0 +1,43 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do dt_reader_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:28:50 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_master.sv temp_gen.sv i2c_slave.sv dt_model.sv i2c_slave_model.sv dt_reader.sv dt_reader_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_master
+# -- Compiling module temp_gen
+# -- Compiling module i2c_slave
+# -- Compiling module dt_model
+# -- Compiling module i2c_slave_model
+# -- Compiling module dt_reader
+# -- Compiling module dt_rd_env
+# -- Compiling module dt_reader_tb
+# 
+# Top level modules:
+# 	dt_reader_tb
+# End time: 11:28:50 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop dt_reader_tb 
+# Start time: 11:28:51 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.dt_reader_tb
+# Loading work.dt_rd_env
+# Loading work.dt_reader
+# Loading work.i2c_master
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.dt_model
+# Loading work.i2c_slave
+# Loading work.temp_gen
+# Loading work.i2c_slave_model
+# TEST PASSED
+# ** Note: $finish    : dt_reader_tb.sv(467)
+#    Time: 123379230 ns  Iteration: 1  Instance: /dt_reader_tb
+# Break in Module dt_reader_tb at dt_reader_tb.sv line 467
+# Stopped at dt_reader_tb.sv line 467
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 11:29:34 on Oct 28,2026, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 0

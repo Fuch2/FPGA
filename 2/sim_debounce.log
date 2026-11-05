@@ -1,0 +1,35 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do debounce_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:02:06 on Oct 28,2026
+# vlog -sv debounce.sv debounce_tb.sv 
+# -- Compiling module debounce
+# -- Compiling module debounce_tb
+# 
+# Top level modules:
+# 	debounce_tb
+# End time: 09:02:06 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop debounce_tb 
+# Start time: 09:02:06 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.debounce_tb
+# Loading work.debounce
+# debounce_tb: STABLE_CLKS = 50
+# [100000] 1. After reset
+# [3100000] 2. Clean press and release
+# [9100000] 3. Bouncing press and release (x20)
+# [277360000] 4. Short glitches are ignored
+# ------------------------------------------------------------
+# presses: 22, releases: 22, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : debounce_tb.sv(154)
+#    Time: 317520 ns  Iteration: 1  Instance: /debounce_tb
+# Break in Module debounce_tb at debounce_tb.sv line 154
+# Stopped at debounce_tb.sv line 154
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:02:06 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

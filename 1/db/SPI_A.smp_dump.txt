@@ -1,0 +1,17 @@
+
+State Machine - |SPI_topA|spi_master:u_master|state
+Name state.GAP state.TAIL state.NEXT state.HIGH state.LOW state.SETUP state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.SETUP 0 0 0 0 0 1 1 
+state.LOW 0 0 0 0 1 0 1 
+state.HIGH 0 0 0 1 0 0 1 
+state.NEXT 0 0 1 0 0 0 1 
+state.TAIL 0 1 0 0 0 0 1 
+state.GAP 1 0 0 0 0 0 1 
+
+State Machine - |SPI_topA|spi_cmd_tx:u_cmd_tx|state
+Name state.REPORT state.PAUSE state.SEND state.IDLE 
+state.IDLE 0 0 0 0 
+state.SEND 0 0 1 1 
+state.PAUSE 0 1 0 1 
+state.REPORT 1 0 0 1 

@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at i2c_txn.sv(49): object "wr_data" differs only in case from object "WR_DATA" in the same scope File: C:/Users/aynur/Documents/FPGA/2/i2c_txn.sv Line: 49
+Info (10281): Verilog HDL Declaration information at i2c_txn.sv(54): object "rd_data" differs only in case from object "RD_DATA" in the same scope File: C:/Users/aynur/Documents/FPGA/2/i2c_txn.sv Line: 54
+Info (10281): Verilog HDL Declaration information at i2c_slave.sv(31): object "rx_data" differs only in case from object "RX_DATA" in the same scope File: C:/Users/aynur/Documents/FPGA/2/i2c_slave.sv Line: 31

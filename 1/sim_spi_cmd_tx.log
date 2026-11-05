@@ -1,0 +1,155 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_cmd_tx_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:01:41 on Oct 28,2026
+# vlog -sv spi_master.sv spi_slave.sv spi_cmd_tx.sv spi_cmd_tx_tb.sv 
+# -- Compiling module spi_master
+# -- Compiling module spi_slave
+# -- Compiling module spi_cmd_tx
+# -- Compiling module spi_cmd_tx_tb
+# 
+# Top level modules:
+# 	spi_cmd_tx_tb
+# End time: 09:01:41 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_cmd_tx_tb 
+# Start time: 09:01:41 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_cmd_tx_tb
+# Loading work.spi_cmd_tx
+# Loading work.spi_master
+# Loading work.spi_slave
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftrd9eah".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrd9eah
+# [0.25 us] 1. Start
+# [91.67 us]    start: status 80 -> 81, D = 0000
+# [91.67 us] 2. Measure x3
+# [203.09 us]    measure0: status 81 -> 83, D = 1000
+# [314.51 us]    measure1: status 83 -> 83, D = 1001
+# [425.93 us]    measure2: status 83 -> 83, D = 1002
+# [425.93 us] 4. Stop, 3. Measure while stopped
+# [517.35 us]    stop: status 83 -> 82, D = 1002
+# [628.77 us]    measure_empty: status 82 -> 84, D = 1002
+# [628.77 us] 7. Request while busy
+# [720.19 us] 8. Simultaneous requests
+# [903.03 us] 9. Corrupted CHK and absent slave
+# [1014.45 us]    bad_chk: status 81 -> 83, D = 1000
+# [1125.87 us]    no_slave: status ff -> ff, D = ffff
+# [1217.29 us]    recovered: status 83 -> 81, D = 0000
+# [1217.29 us] 10. 100 random commands
+# [1308.71 us]    rand0: status 81 -> 80, D = 0000
+# [1420.13 us]    rand1: status 80 -> 84, D = 0000
+# [1531.55 us]    rand2: status 84 -> 84, D = 0000
+# [1622.97 us]    rand3: status 84 -> 84, D = 0000
+# [1714.39 us]    rand4: status 84 -> 81, D = 0000
+# [1805.81 us]    rand5: status 81 -> 81, D = 0000
+# [1897.23 us]    rand6: status 81 -> 80, D = 0000
+# [2008.65 us]    rand7: status 80 -> 84, D = 0000
+# [2100.07 us]    rand8: status 84 -> 81, D = 0000
+# [2211.49 us]    rand9: status 81 -> 83, D = 1000
+# [2302.91 us]    rand10: status 83 -> 81, D = 0000
+# [2394.33 us]    rand11: status 81 -> 80, D = 0000
+# [2505.75 us]    rand12: status 80 -> 84, D = 0000
+# [2597.17 us]    rand13: status 84 -> 81, D = 0000
+# [2688.59 us]    rand14: status 81 -> 81, D = 0000
+# [2800.01 us]    rand15: status 81 -> 83, D = 1000
+# [2891.43 us]    rand16: status 83 -> 81, D = 0000
+# [3002.85 us]    rand17: status 81 -> 83, D = 1000
+# [3114.27 us]    rand18: status 83 -> 83, D = 1001
+# [3205.69 us]    rand19: status 83 -> 82, D = 1001
+# [3297.11 us]    rand20: status 82 -> 81, D = 0000
+# [3388.53 us]    rand21: status 81 -> 81, D = 0000
+# [3499.95 us]    rand22: status 81 -> 83, D = 1000
+# [3591.37 us]    rand23: status 83 -> 82, D = 1000
+# [3702.79 us]    rand24: status 82 -> 84, D = 1000
+# [3794.21 us]    rand25: status 84 -> 84, D = 1000
+# [3885.63 us]    rand26: status 84 -> 81, D = 0000
+# [3977.05 us]    rand27: status 81 -> 81, D = 0000
+# [4068.47 us]    rand28: status 81 -> 81, D = 0000
+# [4179.89 us]    rand29: status 81 -> 83, D = 1000
+# [4271.31 us]    rand30: status 83 -> 82, D = 1000
+# [4362.73 us]    rand31: status 82 -> 82, D = 1000
+# [4474.15 us]    rand32: status 82 -> 84, D = 1000
+# [4565.57 us]    rand33: status 84 -> 81, D = 0000
+# [4676.99 us]    rand34: status 81 -> 83, D = 1000
+# [4788.41 us]    rand35: status 83 -> 83, D = 1001
+# [4879.83 us]    rand36: status 83 -> 82, D = 1001
+# [4991.25 us]    rand37: status 82 -> 84, D = 1001
+# [5082.67 us]    rand38: status 84 -> 84, D = 1001
+# [5174.09 us]    rand39: status 84 -> 84, D = 1001
+# [5265.51 us]    rand40: status 84 -> 81, D = 0000
+# [5356.93 us]    rand41: status 81 -> 81, D = 0000
+# [5448.35 us]    rand42: status 81 -> 81, D = 0000
+# [5539.77 us]    rand43: status 81 -> 80, D = 0000
+# [5631.19 us]    rand44: status 80 -> 81, D = 0000
+# [5722.61 us]    rand45: status 81 -> 81, D = 0000
+# [5834.03 us]    rand46: status 81 -> 83, D = 1000
+# [5925.45 us]    rand47: status 83 -> 82, D = 1000
+# [6016.87 us]    rand48: status 82 -> 81, D = 0000
+# [6108.29 us]    rand49: status 81 -> 80, D = 0000
+# [6199.71 us]    rand50: status 80 -> 81, D = 0000
+# [6291.13 us]    rand51: status 81 -> 80, D = 0000
+# [6382.55 us]    rand52: status 80 -> 81, D = 0000
+# [6473.97 us]    rand53: status 81 -> 81, D = 0000
+# [6565.39 us]    rand54: status 81 -> 81, D = 0000
+# [6676.81 us]    rand55: status 81 -> 83, D = 1000
+# [6788.23 us]    rand56: status 83 -> 83, D = 1001
+# [6879.65 us]    rand57: status 83 -> 82, D = 1001
+# [6991.07 us]    rand58: status 82 -> 84, D = 1001
+# [7082.49 us]    rand59: status 84 -> 81, D = 0000
+# [7173.91 us]    rand60: status 81 -> 81, D = 0000
+# [7265.33 us]    rand61: status 81 -> 81, D = 0000
+# [7356.75 us]    rand62: status 81 -> 80, D = 0000
+# [7448.17 us]    rand63: status 80 -> 81, D = 0000
+# [7559.59 us]    rand64: status 81 -> 83, D = 1000
+# [7651.01 us]    rand65: status 83 -> 82, D = 1000
+# [7742.43 us]    rand66: status 82 -> 82, D = 1000
+# [7833.85 us]    rand67: status 82 -> 82, D = 1000
+# [7925.27 us]    rand68: status 82 -> 81, D = 0000
+# [8036.69 us]    rand69: status 81 -> 83, D = 1000
+# [8128.11 us]    rand70: status 83 -> 82, D = 1000
+# [8219.53 us]    rand71: status 82 -> 81, D = 0000
+# [8330.95 us]    rand72: status 81 -> 83, D = 1000
+# [8422.37 us]    rand73: status 83 -> 81, D = 0000
+# [8513.79 us]    rand74: status 81 -> 81, D = 0000
+# [8605.21 us]    rand75: status 81 -> 81, D = 0000
+# [8696.63 us]    rand76: status 81 -> 81, D = 0000
+# [8808.05 us]    rand77: status 81 -> 83, D = 1000
+# [8899.47 us]    rand78: status 83 -> 82, D = 1000
+# [9010.89 us]    rand79: status 82 -> 84, D = 1000
+# [9102.31 us]    rand80: status 84 -> 81, D = 0000
+# [9213.73 us]    rand81: status 81 -> 83, D = 1000
+# [9325.15 us]    rand82: status 83 -> 83, D = 1001
+# [9416.57 us]    rand83: status 83 -> 82, D = 1001
+# [9527.99 us]    rand84: status 82 -> 84, D = 1001
+# [9619.41 us]    rand85: status 84 -> 81, D = 0000
+# [9710.83 us]    rand86: status 81 -> 81, D = 0000
+# [9802.25 us]    rand87: status 81 -> 81, D = 0000
+# [9913.67 us]    rand88: status 81 -> 83, D = 1000
+# [10025.09 us]    rand89: status 83 -> 83, D = 1001
+# [10136.51 us]    rand90: status 83 -> 83, D = 1002
+# [10247.93 us]    rand91: status 83 -> 83, D = 1003
+# [10339.35 us]    rand92: status 83 -> 82, D = 1003
+# [10430.77 us]    rand93: status 82 -> 81, D = 0000
+# [10522.19 us]    rand94: status 81 -> 81, D = 0000
+# [10633.61 us]    rand95: status 81 -> 83, D = 1000
+# [10725.03 us]    rand96: status 83 -> 81, D = 0000
+# [10836.45 us]    rand97: status 81 -> 83, D = 1000
+# [10927.87 us]    rand98: status 83 -> 82, D = 1000
+# [11039.29 us]    rand99: status 82 -> 84, D = 1000
+# ------------------------------------------------------------
+# Results: 224, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_cmd_tx_tb.sv(371)
+#    Time: 11039290 ns  Iteration: 1  Instance: /spi_cmd_tx_tb
+# Break in Module spi_cmd_tx_tb at spi_cmd_tx_tb.sv line 371
+# Stopped at spi_cmd_tx_tb.sv line 371
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:01:43 on Oct 28,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 2

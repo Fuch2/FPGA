@@ -1,0 +1,61 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do eeprom_ind_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:58 on Oct 28,2026
+# vlog -sv bin2bcd.sv seg7_dynamic.sv eeprom_ind.sv eeprom_ind_tb.sv 
+# -- Compiling module bin2bcd
+# -- Compiling module seg7_dynamic
+# -- Compiling module eeprom_ind
+# -- Compiling module eeprom_ind_tb
+# 
+# Top level modules:
+# 	eeprom_ind_tb
+# End time: 12:28:58 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop eeprom_ind_tb 
+# Start time: 12:28:58 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.eeprom_ind_tb
+# Loading work.eeprom_ind
+# Loading work.bin2bcd
+# Loading work.seg7_dynamic
+# [0.05 us] 1. Reset state
+# [0.15 us] 2. 20000 clocks of random events
+# [400.99 us] 3. Pictures of the modes
+# [405.63 us]    auto 1 mode auto: f7 5b 77 66 (dig3..dig0)
+# [444.45 us]    auto 2 mode auto: 06 6f 7d 3f (dig3..dig0)
+# [448.87 us]    next_mode mode data: 06 6f 7d 3f (dig3..dig0)
+# [453.29 us]    next_mode mode addr: f7 5b 77 66 (dig3..dig0)
+# [457.71 us]    next_mode mode cursor: d8 06 6d 6d (dig3..dig0)
+# [462.13 us]    next_mode mode head: f6 06 71 f1 (dig3..dig0)
+# [466.55 us]    next_mode mode tail: f8 3f 77 ed (dig3..dig0)
+# [470.97 us]    next_mode mode count: d4 6d 06 db (dig3..dig0)
+# [475.39 us]    next_mode mode polls: f3 3f 66 6d (dig3..dig0)
+# [479.81 us]    next_mode mode errors: f9 3f 3f 4f (dig3..dig0)
+# [484.25 us]    script changed mode script: ed xx xx 6d (dig3..dig0)
+# [488.69 us]    empty mode data: 40 40 40 40 (dig3..dig0)
+# [493.09 us]    data, no ovf mode data: 06 6f 7d 3f (dig3..dig0)
+# [497.55 us]    tail, no ovf mode head: f6 06 71 71 (dig3..dig0)
+# [497.55 us] 4. Decimal values
+# [501.99 us]    count mode count: d4 3f 3f 3f (dig3..dig0)
+# [506.39 us]    count mode count: d4 3f 3f 07 (dig3..dig0)
+# [510.79 us]    count mode count: d4 3f 6f 6f (dig3..dig0)
+# [515.19 us]    count mode count: d4 06 3f 3f (dig3..dig0)
+# [519.59 us]    count mode count: d4 6d 06 5b (dig3..dig0)
+# [524.01 us]    polls mode polls: f3 3f 3f 3f (dig3..dig0)
+# [528.41 us]    polls mode polls: f3 3f 3f 6f (dig3..dig0)
+# [532.81 us]    polls mode polls: f3 3f 06 3f (dig3..dig0)
+# [537.21 us]    polls mode polls: f3 5b 6d 6d (dig3..dig0)
+# [541.63 us]    errors 3 mode errors: f9 3f 3f 4f (dig3..dig0)
+# [541.63 us] 5. run and clear
+# [546.29 us]    errors 0 mode errors: f9 3f 3f 3f (dig3..dig0)
+# TEST PASSED
+# ** Note: $finish    : eeprom_ind_tb.sv(324)
+#    Time: 546490 ns  Iteration: 1  Instance: /eeprom_ind_tb
+# Break in Module eeprom_ind_tb at eeprom_ind_tb.sv line 324
+# Stopped at eeprom_ind_tb.sv line 324
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 12:28:59 on Oct 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

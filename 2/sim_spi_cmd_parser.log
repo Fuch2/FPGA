@@ -1,0 +1,38 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_cmd_parser_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:01:59 on Oct 28,2026
+# vlog -sv spi_cmd_parser.sv spi_cmd_parser_tb.sv 
+# -- Compiling module spi_cmd_parser
+# -- Compiling module spi_cmd_parser_tb
+# 
+# Top level modules:
+# 	spi_cmd_parser_tb
+# End time: 09:01:59 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_cmd_parser_tb 
+# Start time: 09:01:59 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_cmd_parser_tb
+# Loading work.spi_cmd_parser
+# [0.11 us] 1. Reset state
+# [0.11 us] 2. Commands A1 A2 A3 00
+# [1.53 us] 3. All other first bytes
+# [64.31 us] 4. Wrong frame length
+# [66.09 us] 5. Truncated frame
+# [66.75 us] 6. Last byte together with frame_end
+# [67.61 us] 7. Frames back to back, garbage in bytes 2..4
+# [70.41 us] 8. 3000 random frames
+# ------------------------------------------------------------
+# start 213 measure 202 stop 198 nop 4 unknown 1668 err 1002, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_cmd_parser_tb.sv(205)
+#    Time: 809190 ns  Iteration: 1  Instance: /spi_cmd_parser_tb
+# Break in Module spi_cmd_parser_tb at spi_cmd_parser_tb.sv line 205
+# Stopped at spi_cmd_parser_tb.sv line 205
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:02:00 on Oct 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

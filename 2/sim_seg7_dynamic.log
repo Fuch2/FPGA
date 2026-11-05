@@ -1,0 +1,38 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do seg7_dynamic_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:02:05 on Oct 28,2026
+# vlog -sv seg7_dynamic.sv seg7_dynamic_tb.sv 
+# -- Compiling module seg7_dynamic
+# -- Compiling module seg7_dynamic_tb
+# 
+# Top level modules:
+# 	seg7_dynamic_tb
+# End time: 09:02:05 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop seg7_dynamic_tb 
+# Start time: 09:02:05 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.seg7_dynamic_tb
+# Loading work.seg7_dynamic
+# seg7_dynamic_tb: N = 4, slot = 100 clk, blank = 10 clk
+# [100000] 1. Reset: display is dark until data is loaded
+# [16100000] 2. Digits 0123 without dots
+# [48120000] 3. All 16 hex digits in every position, dots
+# [304120000] 4. Blanked digits
+# [344120000] 5. Raw segments
+# [496120000] 6. Inputs change without valid
+# [520120000] 7. Random en (brightness PWM)
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : seg7_dynamic_tb.sv(252)
+#    Time: 584120 ns  Iteration: 1  Instance: /seg7_dynamic_tb
+# Break in Module seg7_dynamic_tb at seg7_dynamic_tb.sv line 252
+# Stopped at seg7_dynamic_tb.sv line 252
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:02:05 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

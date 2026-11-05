@@ -1,0 +1,68 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do i2c_ind_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:56:46 on Oct 28,2026
+# vlog -sv seg7_dynamic.sv i2c_ind.sv i2c_ind_tb.sv 
+# -- Compiling module seg7_dynamic
+# -- Compiling module i2c_ind
+# -- Compiling module i2c_ind_tb
+# 
+# Top level modules:
+# 	i2c_ind_tb
+# End time: 09:56:46 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop i2c_ind_tb 
+# Start time: 09:56:46 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.i2c_ind_tb
+# Loading work.i2c_ind
+# Loading work.seg7_dynamic
+# [0.05 us] 1. Reset state
+# [3.41 us]    mode D: 3f 3f 3f 3f (dig3..dig0)
+# [3.41 us] 2. 20000 clocks of random events
+# [403.47 us] 3. All display modes
+# [406.85 us]    mode F: 71 86 66 3f (dig3..dig0)
+# [410.17 us]    mode P: 73 xx xx 66 (dig3..dig0)
+# [413.49 us]    mode D: 06 6f 7d 3f (dig3..dig0)
+# [416.81 us]    mode A: 77 xx 66 7f (dig3..dig0)
+# [420.13 us]    mode S: 6d xx 7f 06 (dig3..dig0)
+# [423.45 us]    mode t: 78 3f 07 6d (dig3..dig0)
+# [426.77 us]    mode n: 54 3f 6f 06 (dig3..dig0)
+# [430.09 us]    mode E: 79 3f 4f 6d (dig3..dig0)
+# [433.41 us]    mode F: 71 86 66 3f (dig3..dig0)
+# [433.41 us] 4. Mode jumps
+# [436.79 us]    mode P: 73 xx xx 66 (dig3..dig0)
+# [440.17 us]    mode F: 71 86 66 3f (dig3..dig0)
+# [443.55 us]    mode D: 06 6f 7d 3f (dig3..dig0)
+# [443.55 us] 5. Found list
+# [446.93 us]    mode F: 71 bf 66 3f (dig3..dig0)
+# [530.23 us]    mode F: 71 db 66 4f (dig3..dig0)
+# [613.53 us]    mode F: 71 cf 66 7d (dig3..dig0)
+# [696.83 us]    mode F: 71 86 66 3f (dig3..dig0)
+# [780.13 us]    mode F: 71 db 66 4f (dig3..dig0)
+# [780.13 us] 6. Counter 999 -> 000
+# [803.41 us]    mode t: 78 6f 6f 7f (dig3..dig0)
+# [806.73 us]    mode t: 78 6f 6f 6f (dig3..dig0)
+# [810.05 us]    mode t: 78 3f 3f 3f (dig3..dig0)
+# [810.05 us] 7. clear
+# [813.51 us]    mode t: 78 3f 3f 3f (dig3..dig0)
+# [816.83 us]    mode n: 54 3f 3f 3f (dig3..dig0)
+# [820.15 us]    mode E: 79 3f 3f 3f (dig3..dig0)
+# [823.47 us]    mode F: 71 cf 66 7d (dig3..dig0)
+# [826.79 us]    mode P: 73 xx xx 66 (dig3..dig0)
+# [830.11 us]    mode D: 06 6f 7d 3f (dig3..dig0)
+# [833.43 us]    mode A: 77 xx 66 7f (dig3..dig0)
+# [836.75 us]    mode S: 6d xx 7f 06 (dig3..dig0)
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : i2c_ind_tb.sv(327)
+#    Time: 836770 ns  Iteration: 1  Instance: /i2c_ind_tb
+# Break in Module i2c_ind_tb at i2c_ind_tb.sv line 327
+# Stopped at i2c_ind_tb.sv line 327
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:56:46 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

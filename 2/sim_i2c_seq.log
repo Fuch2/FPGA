@@ -1,0 +1,55 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do i2c_seq_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:54:45 on Oct 28,2026
+# vlog -sv i2c_bit.sv i2c_txn.sv i2c_master.sv i2c_seq.sv i2c_res_parser.sv i2c_slave_model.sv i2c_seq_tb.sv 
+# -- Compiling module i2c_bit
+# -- Compiling module i2c_txn
+# -- Compiling module i2c_master
+# -- Compiling module i2c_seq
+# -- Compiling module i2c_res_parser
+# -- Compiling module i2c_slave_model
+# -- Compiling package i2c_seq_tb_sv_unit
+# -- Compiling module i2c_seq_tb
+# 
+# Top level modules:
+# 	i2c_seq_tb
+# End time: 09:54:45 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop i2c_seq_tb 
+# Start time: 09:54:45 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.i2c_seq_tb_sv_unit
+# Loading work.i2c_seq_tb
+# Loading work.i2c_master
+# Loading work.i2c_txn
+# Loading work.i2c_bit
+# Loading work.i2c_seq
+# Loading work.i2c_res_parser
+# Loading work.i2c_slave_model
+# [0.25 us] 1. SCAN
+# [27082.87 us] 2. DT_TEMP
+# [27582.31 us] 3. DT_TOS
+# [28081.75 us] 4. EE_READ
+# [28762.67 us] 5. EE_WRITE twice (ACK polling during the 5 ms write cycle)
+# [34551.55 us]    polls with NACK: 41
+# [40340.43 us] 6. ABSENT
+# [40461.79 us] 7. Sensor is missing
+# [41082.59 us] 8. NACK on a data byte
+# [41385.43 us] 9. Timeout: sensor holds SCL
+# [46403.55 us] 10. EEPROM disappears while polling
+# [64917.27 us] 11. start while busy is ignored
+# [65456.69 us] 12. Everything works after the failures; clear
+# ------------------------------------------------------------
+# ERRORS: 0 (testbench) + 0 (bus monitor)
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : i2c_seq_tb.sv(363)
+#    Time: 66637110 ns  Iteration: 1  Instance: /i2c_seq_tb
+# Break in Module i2c_seq_tb at i2c_seq_tb.sv line 363
+# Stopped at i2c_seq_tb.sv line 363
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:54:57 on Oct 28,2026, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 0

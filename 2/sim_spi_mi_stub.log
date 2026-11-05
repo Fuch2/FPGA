@@ -1,0 +1,38 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_mi_stub_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:02:02 on Oct 28,2026
+# vlog -sv spi_mi_stub.sv spi_mi_stub_tb.sv 
+# -- Compiling module spi_mi_stub
+# -- Compiling module spi_mi_stub_tb
+# 
+# Top level modules:
+# 	spi_mi_stub_tb
+# End time: 09:02:02 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_mi_stub_tb 
+# Start time: 09:02:02 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_mi_stub_tb
+# Loading work.spi_mi_stub
+# [0.11 us] 1. Reset state
+# [0.11 us] 2. Start
+# [0.19 us] 3. Measure x3
+# [6.55 us] 4. Measure while BUSY
+# [9.09 us] 5. Stop, measure while stopped
+# [11.29 us] 6. Start again
+# [13.49 us] 7. Start while BUSY
+# [16.03 us] 8. Random commands
+# ------------------------------------------------------------
+# Measurements done: 112, cycles: 20904, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_mi_stub_tb.sv(171)
+#    Time: 418130 ns  Iteration: 1  Instance: /spi_mi_stub_tb
+# Break in Module spi_mi_stub_tb at spi_mi_stub_tb.sv line 171
+# Stopped at spi_mi_stub_tb.sv line 171
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:02:02 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

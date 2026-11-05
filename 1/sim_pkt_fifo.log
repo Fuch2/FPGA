@@ -1,0 +1,39 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do pkt_fifo_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:20 on Oct 28,2026
+# vlog -sv pkt_fifo.sv pkt_fifo_tb.sv 
+# -- Compiling module pkt_fifo
+# -- Compiling module pkt_fifo_tb
+# 
+# Top level modules:
+# 	pkt_fifo_tb
+# End time: 08:33:20 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop pkt_fifo_tb 
+# Start time: 08:33:20 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.pkt_fifo_tb
+# Loading work.pkt_fifo
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlft3tmqig".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3tmqig
+# [0.05 us] 1. Reset state
+# [0.09 us] 2. Fill up, writes into full FIFO are refused
+# [0.33 us] 3. Drain
+# [0.57 us] 4. Random traffic
+# ------------------------------------------------------------
+# written: 8323, read: 8323, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : pkt_fifo_tb.sv(105)
+#    Time: 400810 ns  Iteration: 1  Instance: /pkt_fifo_tb
+# Break in Module pkt_fifo_tb at pkt_fifo_tb.sv line 105
+# Stopped at pkt_fifo_tb.sv line 105
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:20 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

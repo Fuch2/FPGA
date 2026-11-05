@@ -1,0 +1,73 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do UART_top2_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:21 on Oct 28,2026
+# vlog -sv uart_tx.sv uart_rx.sv UART.sv uart_pkt_tx.sv uart_seq_tx.sv uart_tx_mux.sv uart_pkt_parser.sv pkt_fifo.sv uart_cmd_parser.sv test_pkt_gen.sv seg7_dynamic.sv debounce.sv uart_ind.sv UART_top2.sv UART_top2_tb.sv 
+# -- Compiling module uart_tx
+# -- Compiling module uart_rx
+# -- Compiling module UART
+# -- Compiling module uart_pkt_tx
+# -- Compiling module uart_seq_tx
+# -- Compiling module uart_tx_mux
+# -- Compiling module uart_pkt_parser
+# -- Compiling module pkt_fifo
+# -- Compiling module uart_cmd_parser
+# -- Compiling module test_pkt_gen
+# -- Compiling module seg7_dynamic
+# -- Compiling module debounce
+# -- Compiling module uart_ind
+# -- Compiling module UART_top2
+# -- Compiling module UART_top2_tb
+# 
+# Top level modules:
+# 	UART_top2_tb
+# End time: 08:33:21 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop UART_top2_tb 
+# Start time: 08:33:21 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.UART_top2_tb
+# Loading work.UART_top2
+# Loading work.UART
+# Loading work.uart_tx
+# Loading work.uart_rx
+# Loading work.uart_pkt_parser
+# Loading work.uart_cmd_parser
+# Loading work.pkt_fifo
+# Loading work.uart_pkt_tx
+# Loading work.test_pkt_gen
+# Loading work.uart_seq_tx
+# Loading work.uart_tx_mux
+# Loading work.uart_ind
+# Loading work.seg7_dynamic
+# Loading work.debounce
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlft255ig6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft255ig6
+# UART_top2_tb: BAUD = 1000000, 50 clocks per bit, generator period 6000 clocks
+# [0.2 us] 1. Reset state
+# [0.2 us] 2. Garbage is ignored
+# [300.2 us] 3. Start: generator packets, Stop
+# [1320.5 us] 4. Echo of 20 good packets back-to-back
+# [3082.8 us] 5. Packets with wrong CHK: no echo
+# [3482.8 us] 6. Cut packet and pause, then a good packet
+# [3822.1 us] 7. KEY1: one generator packet, KEY2: message
+# [4020.8 us] 8. Start + echo at the same time
+# [5484.6 us] 8b. MU is 1% faster: 25 packets back-to-back, no echo lost
+# [7647.0 us] 9. Indicator counters
+# [7647.0 us]    r 061, t 070, E 004, u 006
+# ------------------------------------------------------------
+# echo packets: 61, generator packets: 9, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : UART_top2_tb.sv(406)
+#    Time: 7651790 ns  Iteration: 1  Instance: /UART_top2_tb
+# Break in Module UART_top2_tb at UART_top2_tb.sv line 406
+# Stopped at UART_top2_tb.sv line 406
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:25 on Oct 28,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

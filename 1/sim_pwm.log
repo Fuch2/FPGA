@@ -1,0 +1,39 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do pwm_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:32:56 on Oct 28,2026
+# vlog -sv pwm.sv pwm_tb.sv 
+# -- Compiling module pwm
+# -- Compiling module pwm_tb_unit
+# -- Compiling module pwm_tb
+# 
+# Top level modules:
+# 	pwm_tb
+# End time: 08:32:56 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop pwm_tb 
+# Start time: 08:32:56 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.pwm_tb
+# Loading work.pwm_tb_unit
+# Loading work.pwm
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftmfitsq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmfitsq
+# B: WIDTH = 4, DIV = 1, period = 15 clk, checked 300 periods
+# A: WIDTH = 8, DIV = 12, period = 3060 clk, checked 300 periods
+# ------------------------------------------------------------
+# ERRORS: reset = 0, A = 0, B = 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : pwm_tb.sv(179)
+#    Time: 18360111 ns  Iteration: 1  Instance: /pwm_tb
+# Break in Module pwm_tb at pwm_tb.sv line 179
+# Stopped at pwm_tb.sv line 179
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:01 on Oct 28,2026, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 2

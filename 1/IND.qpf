@@ -1,0 +1,4 @@
+# Проект Quartus этапа 1: ШИМ и динамическая индикация (top = IND_top).
+# Лежит рядом с проектом UART в той же папке, у каждого свои файлы db/ и output_files/.
+QUARTUS_VERSION = "24.1"
+PROJECT_REVISION = "IND"

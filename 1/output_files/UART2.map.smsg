@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at uart_tx.sv(6): object "data" differs only in case from object "DATA" in the same scope File: C:/Users/aynur/Documents/FPGA/1/uart_tx.sv Line: 6
+Info (10281): Verilog HDL Declaration information at uart_rx.sv(7): object "data" differs only in case from object "DATA" in the same scope File: C:/Users/aynur/Documents/FPGA/1/uart_rx.sv Line: 7
+Info (10281): Verilog HDL Declaration information at uart_cmd_parser.sv(16): object "CMD_START" differs only in case from object "cmd_start" in the same scope File: C:/Users/aynur/Documents/FPGA/1/uart_cmd_parser.sv Line: 16
+Info (10281): Verilog HDL Declaration information at uart_cmd_parser.sv(18): object "CMD_STOP" differs only in case from object "cmd_stop" in the same scope File: C:/Users/aynur/Documents/FPGA/1/uart_cmd_parser.sv Line: 18
+Info (10281): Verilog HDL Declaration information at uart_cmd_parser.sv(29): object "running" differs only in case from object "RUNNING" in the same scope File: C:/Users/aynur/Documents/FPGA/1/uart_cmd_parser.sv Line: 29

@@ -1,0 +1,4 @@
+# Проект Quartus этапа 3, плата B (МИ, SPI-слейв), top = SPI_topB.
+# Лежит рядом с проектом Second в той же папке, Second.qpf/qsf не меняются.
+QUARTUS_VERSION = "24.1"
+PROJECT_REVISION = "SPI_B"

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 28 09:50:45 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
+Revision Name : I2C_B
+Top-level Entity Name : I2C_topB
+Family : Cyclone IV E
+Total logic elements : 997
+    Total combinational functions : 914
+    Dedicated logic registers : 531
+Total registers : 531
+Total pins : 24
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

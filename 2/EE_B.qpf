@@ -1,0 +1,4 @@
+# Проект Quartus этапа 6, плата B (МИ, EEPROM AT24C08: запись, чтение, кольцо), top = EE_topB.
+# Лежит рядом с проектами Second, SPI_B, I2C_B и DT_B в той же папке, их qpf/qsf не меняются.
+QUARTUS_VERSION = "24.1"
+PROJECT_REVISION = "EE_B"

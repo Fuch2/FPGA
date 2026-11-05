@@ -1,0 +1,27 @@
+
+State Machine - |I2C_topB|i2c_seq:u_seq|state
+Name state.IDLE state.RUN state.SEND 
+state.IDLE 0 0 0 
+state.SEND 1 0 1 
+state.RUN 1 1 0 
+
+State Machine - |I2C_topB|i2c_master:u_i2c|i2c_bit:u_bit|state
+Name state.IDLE state.HOLD state.ACT 
+state.IDLE 0 0 0 
+state.ACT 1 0 1 
+state.HOLD 1 1 0 
+
+State Machine - |I2C_topB|i2c_master:u_i2c|i2c_txn:u_txn|state
+Name state.FINISH state.STOP state.RD_ACK state.RD_PUSH state.RD_DATA state.WR_ACK state.WR_DATA state.WR_WAIT state.ADDR_ACK state.ADDR state.START state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.START 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ADDR 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ADDR_ACK 0 0 0 0 0 0 0 0 1 0 0 1 
+state.WR_WAIT 0 0 0 0 0 0 0 1 0 0 0 1 
+state.WR_DATA 0 0 0 0 0 0 1 0 0 0 0 1 
+state.WR_ACK 0 0 0 0 0 1 0 0 0 0 0 1 
+state.RD_DATA 0 0 0 0 1 0 0 0 0 0 0 1 
+state.RD_PUSH 0 0 0 1 0 0 0 0 0 0 0 1 
+state.RD_ACK 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STOP 0 1 0 0 0 0 0 0 0 0 0 1 
+state.FINISH 1 0 0 0 0 0 0 0 0 0 0 1 

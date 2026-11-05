@@ -1,0 +1,39 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do uart_seq_tx_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:13 on Oct 28,2026
+# vlog -sv uart_seq_tx.sv uart_seq_tx_tb.sv 
+# -- Compiling module uart_seq_tx
+# -- Compiling module uart_seq_tx_tb
+# 
+# Top level modules:
+# 	uart_seq_tx_tb
+# End time: 08:33:13 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop uart_seq_tx_tb 
+# Start time: 08:33:13 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.uart_seq_tx_tb
+# Loading work.uart_seq_tx
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftnzqaxd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnzqaxd
+# [0.07 us] 1. Reset state
+# [0.07 us] 2. One sequence, tx_ready = 1
+# [0.33 us] 3. start while busy is ignored
+# [1.11 us] 4-5. 20 sequences, random tx_ready, start right after the end
+# ------------------------------------------------------------
+# sequences: str 22 of 22, one 25 of 25, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : uart_seq_tx_tb.sv(175)
+#    Time: 11090 ns  Iteration: 1  Instance: /uart_seq_tx_tb
+# Break in Module uart_seq_tx_tb at uart_seq_tx_tb.sv line 175
+# Stopped at uart_seq_tx_tb.sv line 175
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 08:33:13 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

@@ -1,0 +1,71 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do SPI_topA_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:01:45 on Oct 28,2026
+# vlog -sv spi_master.sv spi_slave.sv spi_cmd_tx.sv seg7_dynamic.sv debounce.sv spi_ind.sv SPI_topA.sv SPI_topA_tb.sv 
+# -- Compiling module spi_master
+# -- Compiling module spi_slave
+# -- Compiling module spi_cmd_tx
+# -- Compiling module seg7_dynamic
+# -- Compiling module debounce
+# -- Compiling module spi_ind
+# -- Compiling module SPI_topA
+# -- Compiling module SPI_topA_tb
+# 
+# Top level modules:
+# 	SPI_topA_tb
+# End time: 09:01:45 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop SPI_topA_tb 
+# Start time: 09:01:45 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.SPI_topA_tb
+# Loading work.SPI_topA
+# Loading work.spi_cmd_tx
+# Loading work.spi_master
+# Loading work.spi_ind
+# Loading work.seg7_dynamic
+# Loading work.spi_slave
+# Loading work.debounce
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftim0kzt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftim0kzt
+# [0.25 us] 1. Reset state
+# [0.25 us] 2. KEY1 - Start
+# [104.19 us]    cmd after Start: "c A1"
+# [115.49 us]    status after Start: "5 81"
+# [115.49 us] 3. KEY2 - Measure x3
+# [254.13 us]    data after Measure 0: "1000"
+# [373.17 us]    data after Measure 1: "1001"
+# [492.21 us]    data after Measure 2: "1002"
+# [503.51 us]    cmd after Measure: "c A2"
+# [514.81 us]    status after Measure: "5 83"
+# [514.81 us] 4. Counters
+# [526.11 us]    tx frames: "t008"
+# [537.41 us]    rx frames: "r008"
+# [548.71 us]    errors: "E000"
+# [548.71 us] 5. KEY3 - Stop, Measure when stopped
+# [774.29 us]    status EMPTY: "5 84"
+# [800.29 us]    data unchanged: "1002"
+# [800.29 us] 6. Key during a command
+# [923.83 us]    errors after lost key: "E001"
+# [923.83 us] 7. No slave connected (MISO = 1)
+# [1042.07 us]    errors without MI: "E003"
+# [1068.07 us]    tx frames: "t016"
+# [1079.37 us]    rx frames: "r014"
+# [1079.37 us] 8. KEY4 cycles through 6 modes
+# ------------------------------------------------------------
+# Frames on SPI: 16, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : SPI_topA_tb.sv(351)
+#    Time: 1095970 ns  Iteration: 1  Instance: /SPI_topA_tb
+# Break in Module SPI_topA_tb at SPI_topA_tb.sv line 351
+# Stopped at SPI_topA_tb.sv line 351
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:01:45 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

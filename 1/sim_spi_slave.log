@@ -1,0 +1,45 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_slave_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:01:34 on Oct 28,2026
+# vlog -sv spi_slave.sv spi_slave_tb.sv 
+# -- Compiling module spi_slave
+# -- Compiling module spi_slave_tb
+# 
+# Top level modules:
+# 	spi_slave_tb
+# End time: 09:01:34 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_slave_tb 
+# Start time: 09:01:34 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_slave_tb
+# Loading work.spi_slave
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftabeb9n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftabeb9n
+# [0.25 us] 1. Reset state
+# [0.25 us] 2. 4-byte frame
+# [36.83 us] 3. Corner byte values
+# [110.17 us] 4. Source answers only 2 bytes of 4
+# [167.61 us] 5. First response byte after 5 and 30 clocks
+# [241.03 us] 6. First response byte too late
+# [261.77 us] 7. CS_N raised in the middle of a byte
+# [321.35 us] 8. Noise on SCK and MOSI while CS_N = 1
+# [367.99 us] 9. Pauses between bytes, SCK 3 MHz
+# [420.35 us] 10. 300 random frames
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_slave_tb.sv(281)
+#    Time: 12451590 ns  Iteration: 1  Instance: /spi_slave_tb
+# Break in Module spi_slave_tb at spi_slave_tb.sv line 281
+# Stopped at spi_slave_tb.sv line 281
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:01:36 on Oct 28,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 2

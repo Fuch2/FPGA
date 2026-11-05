@@ -1,0 +1,27 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do temp_fmt_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:27:48 on Oct 28,2026
+# vlog -sv temp_fmt.sv temp_fmt_tb.sv 
+# -- Compiling module temp_fmt
+# -- Compiling module temp_fmt_tb
+# 
+# Top level modules:
+# 	temp_fmt_tb
+# End time: 11:27:48 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop temp_fmt_tb 
+# Start time: 11:27:48 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.temp_fmt_tb
+# Loading work.temp_fmt
+# TEST PASSED
+# ** Note: $finish    : temp_fmt_tb.sv(145)
+#    Time: 581450 ns  Iteration: 1  Instance: /temp_fmt_tb
+# Break in Module temp_fmt_tb at temp_fmt_tb.sv line 145
+# Stopped at temp_fmt_tb.sv line 145
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 11:27:49 on Oct 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

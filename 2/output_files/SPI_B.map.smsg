@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at spi_cmd_parser.sv(22): object "CMD_START" differs only in case from object "cmd_start" in the same scope File: C:/Users/aynur/Documents/FPGA/2/spi_cmd_parser.sv Line: 22
+Info (10281): Verilog HDL Declaration information at spi_cmd_parser.sv(23): object "CMD_MEASURE" differs only in case from object "cmd_measure" in the same scope File: C:/Users/aynur/Documents/FPGA/2/spi_cmd_parser.sv Line: 23
+Info (10281): Verilog HDL Declaration information at spi_cmd_parser.sv(24): object "CMD_STOP" differs only in case from object "cmd_stop" in the same scope File: C:/Users/aynur/Documents/FPGA/2/spi_cmd_parser.sv Line: 24
+Info (10281): Verilog HDL Declaration information at spi_cmd_parser.sv(26): object "CMD_NOP" differs only in case from object "cmd_nop" in the same scope File: C:/Users/aynur/Documents/FPGA/2/spi_cmd_parser.sv Line: 26

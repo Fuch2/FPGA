@@ -1,0 +1,42 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_link_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:01:36 on Oct 28,2026
+# vlog -sv spi_master.sv spi_slave.sv spi_link_tb.sv 
+# -- Compiling module spi_master
+# -- Compiling module spi_slave
+# -- Compiling module spi_link_tb
+# 
+# Top level modules:
+# 	spi_link_tb
+# End time: 09:01:36 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_link_tb 
+# Start time: 09:01:36 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_link_tb
+# Loading work.spi_master
+# Loading work.spi_slave
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftic8tkb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftic8tkb
+# [0.25 us] 1. Protocol frame
+# [35.99 us] 2. Several frames in a row
+# [143.21 us] 3. Frames of 1..8 bytes, corner values
+# [496.95 us] 4. Gaps between bytes
+# [860.59 us] 5. 500 random frames back to back
+# ------------------------------------------------------------
+# Frames: 523, ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_link_tb.sv(243)
+#    Time: 18730590 ns  Iteration: 1  Instance: /spi_link_tb
+# Break in Module spi_link_tb at spi_link_tb.sv line 243
+# Stopped at spi_link_tb.sv line 243
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:01:40 on Oct 28,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

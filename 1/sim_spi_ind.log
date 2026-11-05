@@ -1,0 +1,59 @@
+# onbreak {resume}
+#  Warning: onbreak command for use within macro
+#  do spi_ind_tb.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:06:23 on Oct 28,2026
+# vlog -sv seg7_dynamic.sv spi_ind.sv spi_ind_tb.sv 
+# -- Compiling module seg7_dynamic
+# -- Compiling module spi_ind
+# -- Compiling module spi_ind_tb
+# 
+# Top level modules:
+# 	spi_ind_tb
+# End time: 09:06:23 on Oct 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -onfinish stop spi_ind_tb 
+# Start time: 09:06:23 on Oct 28,2026
+# Loading sv_std.std
+# Loading work.spi_ind_tb
+# Loading work.spi_ind
+# Loading work.seg7_dynamic
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aynur  Hostname: DESKTOP-BCDE3RE  ProcessID: 14352
+#           Attempting to use alternate WLF file "./wlftd5wzzr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd5wzzr
+# [0.05 us] 1. Reset state
+# [3.35 us]    mode D: 3f 3f 3f 3f (dig3..dig0)
+# [3.35 us] 2. 3000 clocks of random events
+# [63.35 us] 3. All display modes
+# [66.65 us]    mode D: 5e 06 77 06 (dig3..dig0)
+# [69.97 us]    mode c: 58 xx 5e 7f (dig3..dig0)
+# [73.29 us]    mode S: 6d xx 71 5b (dig3..dig0)
+# [76.61 us]    mode t: 78 5b 07 7f (dig3..dig0)
+# [79.93 us]    mode r: 50 5b 6f 4f (dig3..dig0)
+# [83.25 us]    mode E: 79 06 66 7f (dig3..dig0)
+# [86.57 us]    mode D: 5e 06 77 06 (dig3..dig0)
+# [86.57 us] 4. Counter 999 -> 000
+# [104.33 us]    mode t: 78 6f 6f 7f (dig3..dig0)
+# [107.65 us]    mode t: 78 6f 6f 6f (dig3..dig0)
+# [110.97 us]    mode t: 78 3f 3f 3f (dig3..dig0)
+# [110.97 us] 5. clear
+# [114.37 us]    mode r: 50 3f 3f 3f (dig3..dig0)
+# [117.69 us]    mode E: 79 3f 3f 3f (dig3..dig0)
+# [121.01 us]    mode D: 3f 3f 3f 3f (dig3..dig0)
+# [124.33 us]    mode c: 58 xx 3f 3f (dig3..dig0)
+# [127.65 us]    mode S: 6d xx 3f 3f (dig3..dig0)
+# [130.97 us]    mode t: 78 3f 3f 3f (dig3..dig0)
+# ------------------------------------------------------------
+# ERRORS: 0
+# TEST PASSED
+# ------------------------------------------------------------
+# ** Note: $finish    : spi_ind_tb.sv(246)
+#    Time: 130970 ns  Iteration: 1  Instance: /spi_ind_tb
+# Break in Module spi_ind_tb at spi_ind_tb.sv line 246
+# Stopped at spi_ind_tb.sv line 246
+# wave zoomfull not supported in batch mode
+#  quit -f
+# End time: 09:06:24 on Oct 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2

@@ -1,0 +1,928 @@
+Analysis & Synthesis report for DT_B
+Wed Oct 28 11:27:10 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DT_topB|dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|state
+  9. State Machine - |DT_topB|dt_bus:u_bus|i2c_bit:u_bit|state
+ 10. State Machine - |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |DT_topB
+ 17. Parameter Settings for User Entity Instance: debounce:g_key[0].u_deb
+ 18. Parameter Settings for User Entity Instance: debounce:g_key[1].u_deb
+ 19. Parameter Settings for User Entity Instance: debounce:g_key[2].u_deb
+ 20. Parameter Settings for User Entity Instance: debounce:g_key[3].u_deb
+ 21. Parameter Settings for User Entity Instance: dt_reader:u_reader
+ 22. Parameter Settings for User Entity Instance: dt_bus:u_bus
+ 23. Parameter Settings for User Entity Instance: dt_bus:u_bus|i2c_txn:u_txn
+ 24. Parameter Settings for User Entity Instance: dt_bus:u_bus|i2c_bit:u_bit
+ 25. Parameter Settings for User Entity Instance: dt_bus:u_bus|dt_model:u_model
+ 26. Parameter Settings for User Entity Instance: dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave
+ 27. Parameter Settings for User Entity Instance: dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen
+ 28. Parameter Settings for User Entity Instance: dt_ind:u_ind
+ 29. Parameter Settings for User Entity Instance: dt_ind:u_ind|seg7_dynamic:u_disp
+ 30. Port Connectivity Checks: "dt_ind:u_ind|seg7_dynamic:u_disp"
+ 31. Port Connectivity Checks: "dt_ind:u_ind|temp_fmt:u_fmt"
+ 32. Port Connectivity Checks: "dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen"
+ 33. Port Connectivity Checks: "dt_bus:u_bus"
+ 34. Port Connectivity Checks: "dt_reader:u_reader"
+ 35. Port Connectivity Checks: "debounce:g_key[3].u_deb"
+ 36. Port Connectivity Checks: "debounce:g_key[2].u_deb"
+ 37. Port Connectivity Checks: "debounce:g_key[1].u_deb"
+ 38. Port Connectivity Checks: "debounce:g_key[0].u_deb"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+ 42. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                             ;
++------------------------------------+-----------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Oct 28 11:27:10 2026               ;
+; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Standard Edition ;
+; Revision Name                      ; DT_B                                                ;
+; Top-level Entity Name              ; DT_topB                                             ;
+; Family                             ; Cyclone IV E                                        ;
+; Total logic elements               ; 1,117                                               ;
+;     Total combinational functions  ; 998                                                 ;
+;     Dedicated logic registers      ; 616                                                 ;
+; Total registers                    ; 616                                                 ;
+; Total pins                         ; 24                                                  ;
+; Total virtual pins                 ; 0                                                   ;
+; Total memory bits                  ; 0                                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                                   ;
+; Total PLLs                         ; 0                                                   ;
++------------------------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; DT_topB            ; DT_B               ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+; i2c_bit.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/i2c_bit.sv      ;         ;
+; i2c_txn.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/i2c_txn.sv      ;         ;
+; i2c_slave.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/i2c_slave.sv    ;         ;
+; temp_gen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/temp_gen.sv     ;         ;
+; dt_model.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/dt_model.sv     ;         ;
+; dt_bus.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/dt_bus.sv       ;         ;
+; dt_reader.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/dt_reader.sv    ;         ;
+; temp_fmt.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/temp_fmt.sv     ;         ;
+; seg7_dynamic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/seg7_dynamic.sv ;         ;
+; debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/debounce.sv     ;         ;
+; dt_ind.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/dt_ind.sv       ;         ;
+; DT_topB.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/aynur/Documents/FPGA/2/DT_topB.sv      ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,117     ;
+;                                             ;           ;
+; Total combinational functions               ; 998       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 428       ;
+;     -- 3 input functions                    ; 162       ;
+;     -- <=2 input functions                  ; 408       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 731       ;
+;     -- arithmetic mode                      ; 267       ;
+;                                             ;           ;
+; Total registers                             ; 616       ;
+;     -- Dedicated logic registers            ; 616       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 24        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 616       ;
+; Total fan-out                               ; 5431      ;
+; Average fan-out                             ; 3.26      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Entity Name  ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+--------------+
+; |DT_topB                     ; 998 (55)            ; 616 (31)                  ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |DT_topB                                                 ; DT_topB      ; work         ;
+;    |debounce:g_key[0].u_deb| ; 29 (29)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|debounce:g_key[0].u_deb                         ; debounce     ; work         ;
+;    |debounce:g_key[1].u_deb| ; 29 (29)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|debounce:g_key[1].u_deb                         ; debounce     ; work         ;
+;    |debounce:g_key[2].u_deb| ; 29 (29)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|debounce:g_key[2].u_deb                         ; debounce     ; work         ;
+;    |debounce:g_key[3].u_deb| ; 29 (29)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|debounce:g_key[3].u_deb                         ; debounce     ; work         ;
+;    |dt_bus:u_bus|            ; 445 (4)             ; 231 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_bus:u_bus                                    ; dt_bus       ; work         ;
+;       |dt_model:u_model|     ; 213 (73)            ; 135 (66)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_bus:u_bus|dt_model:u_model                   ; dt_model     ; work         ;
+;          |i2c_slave:u_slave| ; 88 (88)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave ; i2c_slave    ; work         ;
+;          |temp_gen:u_gen|    ; 52 (52)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen    ; temp_gen     ; work         ;
+;       |i2c_bit:u_bit|        ; 91 (91)             ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_bus:u_bus|i2c_bit:u_bit                      ; i2c_bit      ; work         ;
+;       |i2c_txn:u_txn|        ; 137 (137)           ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn                      ; i2c_txn      ; work         ;
+;    |dt_ind:u_ind|            ; 356 (195)           ; 232 (124)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_ind:u_ind                                    ; dt_ind       ; work         ;
+;       |seg7_dynamic:u_disp|  ; 73 (73)             ; 58 (58)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp                ; seg7_dynamic ; work         ;
+;       |temp_fmt:u_fmt|       ; 88 (88)             ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_ind:u_ind|temp_fmt:u_fmt                     ; temp_fmt     ; work         ;
+;    |dt_reader:u_reader|      ; 26 (26)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DT_topB|dt_reader:u_reader                              ; dt_reader    ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DT_topB|dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|state                                                                     ;
++----------------+------------+----------+------------+---------------+----------------+---------------+---------------+------------+----------------+
+; Name           ; state.MACK ; state.TX ; state.LOAD ; state.ACK_LOW ; state.ACK_WAIT ; state.RX_DATA ; state.RX_ADDR ; state.IDLE ; state.MACK_END ;
++----------------+------------+----------+------------+---------------+----------------+---------------+---------------+------------+----------------+
+; state.IDLE     ; 0          ; 0        ; 0          ; 0             ; 0              ; 0             ; 0             ; 0          ; 0              ;
+; state.RX_ADDR  ; 0          ; 0        ; 0          ; 0             ; 0              ; 0             ; 1             ; 1          ; 0              ;
+; state.RX_DATA  ; 0          ; 0        ; 0          ; 0             ; 0              ; 1             ; 0             ; 1          ; 0              ;
+; state.ACK_WAIT ; 0          ; 0        ; 0          ; 0             ; 1              ; 0             ; 0             ; 1          ; 0              ;
+; state.ACK_LOW  ; 0          ; 0        ; 0          ; 1             ; 0              ; 0             ; 0             ; 1          ; 0              ;
+; state.LOAD     ; 0          ; 0        ; 1          ; 0             ; 0              ; 0             ; 0             ; 1          ; 0              ;
+; state.TX       ; 0          ; 1        ; 0          ; 0             ; 0              ; 0             ; 0             ; 1          ; 0              ;
+; state.MACK     ; 1          ; 0        ; 0          ; 0             ; 0              ; 0             ; 0             ; 1          ; 0              ;
+; state.MACK_END ; 0          ; 0        ; 0          ; 0             ; 0              ; 0             ; 0             ; 1          ; 1              ;
++----------------+------------+----------+------------+---------------+----------------+---------------+---------------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |DT_topB|dt_bus:u_bus|i2c_bit:u_bit|state ;
++------------+------------+------------+--------------------+
+; Name       ; state.IDLE ; state.HOLD ; state.ACT          ;
++------------+------------+------------+--------------------+
+; state.IDLE ; 0          ; 0          ; 0                  ;
+; state.ACT  ; 1          ; 0          ; 1                  ;
+; state.HOLD ; 1          ; 1          ; 0                  ;
++------------+------------+------------+--------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|state                                                                                                                                         ;
++----------------+--------------+------------+--------------+---------------+---------------+--------------+---------------+---------------+----------------+------------+-------------+------------+
+; Name           ; state.FINISH ; state.STOP ; state.RD_ACK ; state.RD_PUSH ; state.RD_DATA ; state.WR_ACK ; state.WR_DATA ; state.WR_WAIT ; state.ADDR_ACK ; state.ADDR ; state.START ; state.IDLE ;
++----------------+--------------+------------+--------------+---------------+---------------+--------------+---------------+---------------+----------------+------------+-------------+------------+
+; state.IDLE     ; 0            ; 0          ; 0            ; 0             ; 0             ; 0            ; 0             ; 0             ; 0              ; 0          ; 0           ; 0          ;
+; state.START    ; 0            ; 0          ; 0            ; 0             ; 0             ; 0            ; 0             ; 0             ; 0              ; 0          ; 1           ; 1          ;
+; state.ADDR     ; 0            ; 0          ; 0            ; 0             ; 0             ; 0            ; 0             ; 0             ; 0              ; 1          ; 0           ; 1          ;
+; state.ADDR_ACK ; 0            ; 0          ; 0            ; 0             ; 0             ; 0            ; 0             ; 0             ; 1              ; 0          ; 0           ; 1          ;
+; state.WR_WAIT  ; 0            ; 0          ; 0            ; 0             ; 0             ; 0            ; 0             ; 1             ; 0              ; 0          ; 0           ; 1          ;
+; state.WR_DATA  ; 0            ; 0          ; 0            ; 0             ; 0             ; 0            ; 1             ; 0             ; 0              ; 0          ; 0           ; 1          ;
+; state.WR_ACK   ; 0            ; 0          ; 0            ; 0             ; 0             ; 1            ; 0             ; 0             ; 0              ; 0          ; 0           ; 1          ;
+; state.RD_DATA  ; 0            ; 0          ; 0            ; 0             ; 1             ; 0            ; 0             ; 0             ; 0              ; 0          ; 0           ; 1          ;
+; state.RD_PUSH  ; 0            ; 0          ; 0            ; 1             ; 0             ; 0            ; 0             ; 0             ; 0              ; 0          ; 0           ; 1          ;
+; state.RD_ACK   ; 0            ; 0          ; 1            ; 0             ; 0             ; 0            ; 0             ; 0             ; 0              ; 0          ; 0           ; 1          ;
+; state.STOP     ; 0            ; 1          ; 0            ; 0             ; 0             ; 0            ; 0             ; 0             ; 0              ; 0          ; 0           ; 1          ;
+; state.FINISH   ; 1            ; 0          ; 0            ; 0             ; 0             ; 0            ; 0             ; 0             ; 0              ; 0          ; 0           ; 1          ;
++----------------+--------------+------------+--------------+---------------+---------------+--------------+---------------+---------------+----------------+------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                         ;
++-------------------------------------------------------------------------------+------------------------------------------------------------+
+; Register name                                                                 ; Reason for Removal                                         ;
++-------------------------------------------------------------------------------+------------------------------------------------------------+
+; dt_ind:u_ind|seg7_dynamic:u_disp|dp_r[0,2,3]                                  ; Stuck at GND due to stuck port data_in                     ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[0..3,5,7..11,13,15,17,18,23,25,31] ; Stuck at GND due to stuck port data_in                     ;
+; dt_bus:u_bus|dt_model:u_model|thyst[0..6]                                     ; Stuck at GND due to stuck port data_in                     ;
+; dt_bus:u_bus|dt_model:u_model|tos[0..6]                                       ; Stuck at GND due to stuck port data_in                     ;
+; dt_bus:u_bus|dt_model:u_model|temp_snap[0..4]                                 ; Stuck at GND due to stuck port data_in                     ;
+; dt_bus:u_bus|i2c_txn:u_txn|addr_r[0..2,4,5]                                   ; Stuck at GND due to stuck port data_in                     ;
+; dt_reader:u_reader|temp_data[0..4]                                            ; Stuck at GND due to stuck port data_in                     ;
+; dt_ind:u_ind|shown_raw[0..4]                                                  ; Stuck at GND due to stuck port data_in                     ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[27,29]                             ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[24] ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[4,16,19..21]                       ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[12] ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[30]                                ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|raw_r[3]      ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[22]                                ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|raw_r[2]      ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|raw_r[1]                                     ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|raw_r[0]      ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|seg_raw_r[6,14]                              ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|raw_r[0]      ;
+; dt_bus:u_bus|i2c_txn:u_txn|addr_r[6]                                          ; Merged with dt_bus:u_bus|i2c_txn:u_txn|addr_r[3]           ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|state~11                      ; Lost fanout                                                ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|state~12                      ; Lost fanout                                                ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|state~13                      ; Lost fanout                                                ;
+; dt_bus:u_bus|i2c_txn:u_txn|state~14                                           ; Lost fanout                                                ;
+; dt_bus:u_bus|i2c_txn:u_txn|state~15                                           ; Lost fanout                                                ;
+; dt_bus:u_bus|i2c_txn:u_txn|state~16                                           ; Lost fanout                                                ;
+; dt_bus:u_bus|i2c_txn:u_txn|state~17                                           ; Lost fanout                                                ;
+; dt_bus:u_bus|dt_model:u_model|tick_cnt[0]                                     ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|slot_cnt[0]   ;
+; dt_bus:u_bus|dt_model:u_model|tick_cnt[1]                                     ; Merged with dt_ind:u_ind|seg7_dynamic:u_disp|slot_cnt[1]   ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|state.IDLE                    ; Lost fanout                                                ;
+; Total Number of Removed Registers = 77                                        ;                                                            ;
++-------------------------------------------------------------------------------+------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                          ;
++---------------------------------+---------------------------+----------------------------------------+
+; Register name                   ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------------------+---------------------------+----------------------------------------+
+; dt_reader:u_reader|temp_data[4] ; Stuck at GND              ; dt_ind:u_ind|shown_raw[4]              ;
+;                                 ; due to stuck port data_in ;                                        ;
+; dt_reader:u_reader|temp_data[3] ; Stuck at GND              ; dt_ind:u_ind|shown_raw[3]              ;
+;                                 ; due to stuck port data_in ;                                        ;
+; dt_reader:u_reader|temp_data[2] ; Stuck at GND              ; dt_ind:u_ind|shown_raw[2]              ;
+;                                 ; due to stuck port data_in ;                                        ;
+; dt_reader:u_reader|temp_data[1] ; Stuck at GND              ; dt_ind:u_ind|shown_raw[1]              ;
+;                                 ; due to stuck port data_in ;                                        ;
+; dt_reader:u_reader|temp_data[0] ; Stuck at GND              ; dt_ind:u_ind|shown_raw[0]              ;
+;                                 ; due to stuck port data_in ;                                        ;
++---------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 616   ;
+; Number of registers using Synchronous Clear  ; 100   ;
+; Number of registers using Synchronous Load   ; 91    ;
+; Number of registers using Asynchronous Clear ; 616   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 314   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Inverted Register Statistics                                          ;
++-------------------------------------------------------------+---------+
+; Inverted Register                                           ; Fan out ;
++-------------------------------------------------------------+---------+
+; dt_ind:u_ind|seg7_dynamic:u_disp|blank_r[1]                 ; 1       ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|blank_r[2]                 ; 1       ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|blank_r[0]                 ; 1       ;
+; dt_ind:u_ind|seg7_dynamic:u_disp|blank_r[3]                 ; 1       ;
+; dt_ind:u_ind|last_ok                                        ; 7       ;
+; gen_mode[1]                                                 ; 9       ;
+; debounce:g_key[1].u_deb|sync[1]                             ; 3       ;
+; dt_bus:u_bus|i2c_bit:u_bit|scl_sync[1]                      ; 5       ;
+; dt_bus:u_bus|i2c_bit:u_bit|sda_sync[1]                      ; 2       ;
+; debounce:g_key[1].u_deb|sync[0]                             ; 1       ;
+; debounce:g_key[0].u_deb|sync[1]                             ; 3       ;
+; debounce:g_key[3].u_deb|sync[1]                             ; 3       ;
+; debounce:g_key[2].u_deb|sync[1]                             ; 3       ;
+; dt_bus:u_bus|i2c_bit:u_bit|scl_sync[0]                      ; 1       ;
+; dt_bus:u_bus|i2c_bit:u_bit|sda_sync[0]                      ; 1       ;
+; poll_cnt[24]                                                ; 2       ;
+; poll_cnt[22]                                                ; 2       ;
+; poll_cnt[21]                                                ; 2       ;
+; poll_cnt[20]                                                ; 2       ;
+; poll_cnt[19]                                                ; 2       ;
+; poll_cnt[18]                                                ; 2       ;
+; poll_cnt[16]                                                ; 2       ;
+; poll_cnt[14]                                                ; 2       ;
+; poll_cnt[13]                                                ; 2       ;
+; poll_cnt[12]                                                ; 2       ;
+; poll_cnt[11]                                                ; 2       ;
+; poll_cnt[5]                                                 ; 2       ;
+; poll_cnt[4]                                                 ; 2       ;
+; poll_cnt[3]                                                 ; 2       ;
+; poll_cnt[2]                                                 ; 2       ;
+; poll_cnt[1]                                                 ; 2       ;
+; poll_cnt[0]                                                 ; 3       ;
+; debounce:g_key[0].u_deb|sync[0]                             ; 1       ;
+; debounce:g_key[3].u_deb|sync[0]                             ; 1       ;
+; debounce:g_key[2].u_deb|sync[0]                             ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|scl_sync[1] ; 19      ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|sda_sync[2] ; 10      ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|sda_sync[1] ; 16      ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|scl_sync[2] ; 10      ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|scl_sync[0] ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|sda_sync[0] ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|thyst[14]                     ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|tos[14]                       ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|thyst[11]                     ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|tos[12]                       ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|thyst[9]                      ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|thyst[8]                      ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[0]        ; 2       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[15]       ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[13]       ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[11]       ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[10]       ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[7]        ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[6]        ; 1       ;
+; dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[5]        ; 1       ;
+; Total number of inverted registers = 55                     ;         ;
++-------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|dig_on[2]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|dig_on[0]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|seg_on[1]                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|seg_on[0]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|res_timeout                     ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |DT_topB|debounce:g_key[1].u_deb|cnt[15]                            ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |DT_topB|debounce:g_key[0].u_deb|cnt[18]                            ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DT_topB|dt_ind:u_ind|temp_fmt:u_fmt|acc[4]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|wr_idx[1]                    ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |DT_topB|debounce:g_key[2].u_deb|cnt[6]                             ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |DT_topB|debounce:g_key[3].u_deb|cnt[18]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[2]       ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |DT_topB|dt_ind:u_ind|start_flash[1]                                ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |DT_topB|dt_ind:u_ind|ack_flash[3]                                  ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |DT_topB|dt_ind:u_ind|nack_flash[8]                                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|raw_r[0]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|cnt_ok[0]                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|cnt_fail[2]                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|cnt_ok[6]                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|cnt_fail[6]                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|cnt_ok[11]                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|cnt_fail[11]                                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|temp_fmt:u_fmt|bin[9]                         ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|mode[1]                                       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|i2c_bit:u_bit|step[2]                         ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|temp_word[5]  ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|temp_word[15] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|temp_word[8]  ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|hex_r[3]                  ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|hex_r[6]                  ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|hex_r[0]                  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|temp_word[9]  ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|remaining[4]                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|remaining[1]                    ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|bit_cnt[3] ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|shreg[3]                        ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|shreg[1]   ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|shreg[6]   ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |DT_topB|dt_reader:u_reader|state[2]                                ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|bit_idx[0]                      ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|bit_cmd[0]                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DT_topB|dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen|lfsr[5]       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DT_topB|dt_ind:u_ind|seg7_dynamic:u_disp|Mux14                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |DT_topB|dt_ind:u_ind|number                                        ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 25 LEs               ; 15 LEs                 ; No         ; |DT_topB|dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave|state      ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |DT_topB|dt_bus:u_bus|i2c_txn:u_txn|state                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |DT_topB ;
++-----------------+----------+--------------------------------------------+
+; Parameter Name  ; Value    ; Type                                       ;
++-----------------+----------+--------------------------------------------+
+; CLK_FREQ        ; 50000000 ; Signed Integer                             ;
+; SCL_FREQ        ; 100000   ; Signed Integer                             ;
+; TIMEOUT_US      ; 1000     ; Signed Integer                             ;
+; DT_ADDR         ; 1001000  ; Unsigned Binary                            ;
+; POLL_MS         ; 500      ; Signed Integer                             ;
+; MODEL_UPDATE_MS ; 500      ; Signed Integer                             ;
+; DEB_CLKS        ; 500000   ; Signed Integer                             ;
+; DIGIT_HZ        ; 1000     ; Signed Integer                             ;
+; BLANK_CLKS      ; 100      ; Signed Integer                             ;
+; FLASH_CLKS      ; 2500000  ; Signed Integer                             ;
+; SEG_ACTIVE      ; 0        ; Unsigned Binary                            ;
+; DIG_ACTIVE      ; 0        ; Unsigned Binary                            ;
+; LED_ACTIVE      ; 0        ; Unsigned Binary                            ;
++-----------------+----------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce:g_key[0].u_deb ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                           ;
+; STABLE_MS      ; 10       ; Signed Integer                           ;
+; STABLE_CLKS    ; 500000   ; Signed Integer                           ;
+; ACTIVE         ; 0        ; Unsigned Binary                          ;
++----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce:g_key[1].u_deb ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                           ;
+; STABLE_MS      ; 10       ; Signed Integer                           ;
+; STABLE_CLKS    ; 500000   ; Signed Integer                           ;
+; ACTIVE         ; 0        ; Unsigned Binary                          ;
++----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce:g_key[2].u_deb ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                           ;
+; STABLE_MS      ; 10       ; Signed Integer                           ;
+; STABLE_CLKS    ; 500000   ; Signed Integer                           ;
+; ACTIVE         ; 0        ; Unsigned Binary                          ;
++----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce:g_key[3].u_deb ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                           ;
+; STABLE_MS      ; 10       ; Signed Integer                           ;
+; STABLE_CLKS    ; 500000   ; Signed Integer                           ;
+; ACTIVE         ; 0        ; Unsigned Binary                          ;
++----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_reader:u_reader ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; LEN_W          ; 8        ; Signed Integer                      ;
+; DT_ADDR        ; 1001000  ; Unsigned Binary                     ;
+; REG_TEMP       ; 00000000 ; Unsigned Binary                     ;
+; REG_CONFIG     ; 00000001 ; Unsigned Binary                     ;
+; WRITE_CONFIG   ; 1        ; Unsigned Binary                     ;
+; CONFIG_VALUE   ; 00000000 ; Unsigned Binary                     ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_bus:u_bus ;
++-----------------+----------+------------------------------+
+; Parameter Name  ; Value    ; Type                         ;
++-----------------+----------+------------------------------+
+; CLK_FREQ        ; 50000000 ; Signed Integer               ;
+; SCL_FREQ        ; 100000   ; Signed Integer               ;
+; TIMEOUT_US      ; 1000     ; Signed Integer               ;
+; LEN_W           ; 8        ; Signed Integer               ;
+; MODEL_ADDR      ; 1001000  ; Unsigned Binary              ;
+; MODEL_UPDATE_MS ; 500      ; Signed Integer               ;
++-----------------+----------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_bus:u_bus|i2c_txn:u_txn ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; LEN_W          ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_bus:u_bus|i2c_bit:u_bit ;
++----------------+----------+---------------------------------------------+
+; Parameter Name ; Value    ; Type                                        ;
++----------------+----------+---------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                              ;
+; SCL_FREQ       ; 100000   ; Signed Integer                              ;
+; TIMEOUT_US     ; 1000     ; Signed Integer                              ;
++----------------+----------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_bus:u_bus|dt_model:u_model ;
++----------------+----------+------------------------------------------------+
+; Parameter Name ; Value    ; Type                                           ;
++----------------+----------+------------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                                 ;
+; ADDR           ; 1001000  ; Unsigned Binary                                ;
+; UPDATE_MS      ; 500      ; Signed Integer                                 ;
++----------------+----------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave ;
++----------------+---------+-------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                              ;
++----------------+---------+-------------------------------------------------------------------+
+; ADDR           ; 1001000 ; Unsigned Binary                                                   ;
++----------------+---------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen ;
++----------------+------------------+-------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                  ;
++----------------+------------------+-------------------------------------------------------+
+; LFSR_SEED      ; 1010110011100001 ; Unsigned Binary                                       ;
++----------------+------------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_ind:u_ind ;
++----------------+----------+-------------------------------+
+; Parameter Name ; Value    ; Type                          ;
++----------------+----------+-------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                ;
+; DIGIT_HZ       ; 1000     ; Signed Integer                ;
+; BLANK_CLKS     ; 100      ; Signed Integer                ;
+; FLASH_CLKS     ; 2500000  ; Signed Integer                ;
+; SEG_ACTIVE     ; 0        ; Unsigned Binary               ;
+; DIG_ACTIVE     ; 0        ; Unsigned Binary               ;
+; LED_ACTIVE     ; 0        ; Unsigned Binary               ;
++----------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dt_ind:u_ind|seg7_dynamic:u_disp ;
++----------------+----------+---------------------------------------------------+
+; Parameter Name ; Value    ; Type                                              ;
++----------------+----------+---------------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                                    ;
+; N              ; 4        ; Signed Integer                                    ;
+; DIGIT_HZ       ; 1000     ; Signed Integer                                    ;
+; BLANK_CLKS     ; 100      ; Signed Integer                                    ;
+; SEG_ACTIVE     ; 0        ; Unsigned Binary                                   ;
+; DIG_ACTIVE     ; 0        ; Unsigned Binary                                   ;
++----------------+----------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "dt_ind:u_ind|seg7_dynamic:u_disp" ;
++-----------------+-------+----------+-------------------------+
+; Port            ; Type  ; Severity ; Details                 ;
++-----------------+-------+----------+-------------------------+
+; dp[3..2]        ; Input ; Info     ; Stuck at GND            ;
+; dp[0]           ; Input ; Info     ; Stuck at GND            ;
+; blank[0]        ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[18..17] ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[11..7]  ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[3..0]   ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[31]     ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[25]     ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[23]     ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[15]     ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[13]     ; Input ; Info     ; Stuck at GND            ;
+; seg_raw[5]      ; Input ; Info     ; Stuck at GND            ;
+; valid           ; Input ; Info     ; Stuck at VCC            ;
+; en              ; Input ; Info     ; Stuck at VCC            ;
++-----------------+-------+----------+-------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "dt_ind:u_ind|temp_fmt:u_fmt" ;
++------+--------+----------+------------------------------+
+; Port ; Type   ; Severity ; Details                      ;
++------+--------+----------+------------------------------+
+; busy ; Output ; Info     ; Explicitly unconnected       ;
++------+--------+----------+------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen" ;
++----------+--------+----------+-------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                   ;
++----------+--------+----------+-------------------------------------------+
+; temp_val ; Output ; Info     ; Explicitly unconnected                    ;
++----------+--------+----------+-------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dt_bus:u_bus"                                                                                       ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; gen_lo[10..8]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; gen_lo[4..0]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; gen_lo[7]            ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; gen_lo[6]            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; gen_lo[5]            ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; gen_hi[7..4]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; gen_hi[10..8]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; gen_hi[3..0]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; gen_step[10..3]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; gen_step[1..0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; gen_step[2]          ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; gen_noise_mask[3..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; gen_noise_mask[7..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; res_len              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ev_stop              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dt_reader:u_reader"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; busy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "debounce:g_key[3].u_deb"    ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; pressed   ; Output ; Info     ; Explicitly unconnected ;
+; release_p ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "debounce:g_key[2].u_deb"    ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; pressed   ; Output ; Info     ; Explicitly unconnected ;
+; release_p ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "debounce:g_key[1].u_deb"    ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; pressed   ; Output ; Info     ; Explicitly unconnected ;
+; release_p ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "debounce:g_key[0].u_deb"    ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; pressed   ; Output ; Info     ; Explicitly unconnected ;
+; release_p ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 24                          ;
+; cycloneiii_ff         ; 616                         ;
+;     CLR               ; 218                         ;
+;     CLR SCLR          ; 81                          ;
+;     CLR SCLR SLD      ; 1                           ;
+;     CLR SLD           ; 2                           ;
+;     ENA CLR           ; 208                         ;
+;     ENA CLR SCLR      ; 18                          ;
+;     ENA CLR SLD       ; 88                          ;
+; cycloneiii_io_obuf    ; 2                           ;
+; cycloneiii_lcell_comb ; 1011                        ;
+;     arith             ; 267                         ;
+;         2 data inputs ; 251                         ;
+;         3 data inputs ; 16                          ;
+;     normal            ; 744                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 54                          ;
+;         2 data inputs ; 115                         ;
+;         3 data inputs ; 146                         ;
+;         4 data inputs ; 428                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 3.32                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
+    Info: Processing started: Wed Oct 28 11:26:57 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DT_B -c DT_B
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file i2c_bit.sv
+    Info (12023): Found entity 1: i2c_bit File: C:/Users/aynur/Documents/FPGA/2/i2c_bit.sv Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file i2c_txn.sv
+    Info (12023): Found entity 1: i2c_txn File: C:/Users/aynur/Documents/FPGA/2/i2c_txn.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file i2c_slave.sv
+    Info (12023): Found entity 1: i2c_slave File: C:/Users/aynur/Documents/FPGA/2/i2c_slave.sv Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file temp_gen.sv
+    Info (12023): Found entity 1: temp_gen File: C:/Users/aynur/Documents/FPGA/2/temp_gen.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file dt_model.sv
+    Info (12023): Found entity 1: dt_model File: C:/Users/aynur/Documents/FPGA/2/dt_model.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file dt_bus.sv
+    Info (12023): Found entity 1: dt_bus File: C:/Users/aynur/Documents/FPGA/2/dt_bus.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file dt_reader.sv
+    Info (12023): Found entity 1: dt_reader File: C:/Users/aynur/Documents/FPGA/2/dt_reader.sv Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file temp_fmt.sv
+    Info (12023): Found entity 1: temp_fmt File: C:/Users/aynur/Documents/FPGA/2/temp_fmt.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file seg7_dynamic.sv
+    Info (12023): Found entity 1: seg7_dynamic File: C:/Users/aynur/Documents/FPGA/2/seg7_dynamic.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file debounce.sv
+    Info (12023): Found entity 1: debounce File: C:/Users/aynur/Documents/FPGA/2/debounce.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file dt_ind.sv
+    Info (12023): Found entity 1: dt_ind File: C:/Users/aynur/Documents/FPGA/2/dt_ind.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file dt_topb.sv
+    Info (12023): Found entity 1: DT_topB File: C:/Users/aynur/Documents/FPGA/2/DT_topB.sv Line: 18
+Info (12127): Elaborating entity "DT_topB" for the top level hierarchy
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:g_key[0].u_deb" File: C:/Users/aynur/Documents/FPGA/2/DT_topB.sv Line: 88
+Info (12128): Elaborating entity "dt_reader" for hierarchy "dt_reader:u_reader" File: C:/Users/aynur/Documents/FPGA/2/DT_topB.sv Line: 162
+Info (12128): Elaborating entity "dt_bus" for hierarchy "dt_bus:u_bus" File: C:/Users/aynur/Documents/FPGA/2/DT_topB.sv Line: 206
+Info (12128): Elaborating entity "i2c_txn" for hierarchy "dt_bus:u_bus|i2c_txn:u_txn" File: C:/Users/aynur/Documents/FPGA/2/dt_bus.sv Line: 115
+Info (12128): Elaborating entity "i2c_bit" for hierarchy "dt_bus:u_bus|i2c_bit:u_bit" File: C:/Users/aynur/Documents/FPGA/2/dt_bus.sv Line: 136
+Info (12128): Elaborating entity "dt_model" for hierarchy "dt_bus:u_bus|dt_model:u_model" File: C:/Users/aynur/Documents/FPGA/2/dt_bus.sv Line: 155
+Info (12128): Elaborating entity "i2c_slave" for hierarchy "dt_bus:u_bus|dt_model:u_model|i2c_slave:u_slave" File: C:/Users/aynur/Documents/FPGA/2/dt_model.sv Line: 75
+Info (10264): Verilog HDL Case Statement information at i2c_slave.sv(108): all case item expressions in this case statement are onehot File: C:/Users/aynur/Documents/FPGA/2/i2c_slave.sv Line: 108
+Info (12128): Elaborating entity "temp_gen" for hierarchy "dt_bus:u_bus|dt_model:u_model|temp_gen:u_gen" File: C:/Users/aynur/Documents/FPGA/2/dt_model.sv Line: 110
+Info (12128): Elaborating entity "dt_ind" for hierarchy "dt_ind:u_ind" File: C:/Users/aynur/Documents/FPGA/2/DT_topB.sv Line: 237
+Info (12128): Elaborating entity "temp_fmt" for hierarchy "dt_ind:u_ind|temp_fmt:u_fmt" File: C:/Users/aynur/Documents/FPGA/2/dt_ind.sv Line: 104
+Info (12128): Elaborating entity "seg7_dynamic" for hierarchy "dt_ind:u_ind|seg7_dynamic:u_disp" File: C:/Users/aynur/Documents/FPGA/2/dt_ind.sv Line: 242
+Info (13000): Registers with preset signals will power-up high File: C:/Users/aynur/Documents/FPGA/2/seg7_dynamic.sv Line: 88
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/aynur/Documents/FPGA/2/output_files/DT_B.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1163 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 1139 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Wed Oct 28 11:27:10 2026
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/aynur/Documents/FPGA/2/output_files/DT_B.map.smsg.
+
+
